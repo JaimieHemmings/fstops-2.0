@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
+
 {% block content%}
-<h1 class="font-bold text-3xl h1">Test Title</h1>
+{% include 'home/partials/main-hero.html' with title="ART IN FOCUS" subtitle="YOUR STORY" span="Captured" %}
+
+
 {% endblock %}

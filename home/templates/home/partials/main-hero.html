@@ -1,0 +1,43 @@
+{% load static %}
+<header>
+  <div class="wrapper relative w-full h-screen overflow-hidden dark-overlay grid-overlay"> 
+    {% include 'home/partials/video.html' %} 
+
+    <div class="content relative z-10 text-center h-full flex flex-col justify-end">
+      <div class="circle absolute z-10 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
+      </div>
+
+      <h1 class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
+        {% if title %}
+          {{ title }}
+        {% else %}
+          ART IN FOCUS
+        {% endif %}
+      </h1>
+      <p class="text-5xl md:text-8xl text-white mb-[5rem] md:mb-[10rem] leading-[0.8] font-bold mt-1">
+        {% if subtitle %}
+          {{ subtitle }}
+        {% else %}
+          YOUR STORY
+        {% endif %}
+        <span class="playfair-display text-4xl md:text-6xl mt-1 block italic gold-text">
+          {% if span %}
+            {{ span }}
+          {% else %}
+            Captured
+          {% endif %}
+        </span>
+      </p>
+
+      <div class="top-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+        <div class="border-corner border-right-0 border-bottom-0"></div>
+        <div class="border-corner border-left-0 border-bottom-0"></div>
+      </div>
+      <div class="bottom-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+        <div class="border-corner border-top-0 border-right-0"></div>
+        <div class="border-corner border-top-0 border-left-0"></div>
+      </div>
+
+    </div>
+  </div>
+</header>
