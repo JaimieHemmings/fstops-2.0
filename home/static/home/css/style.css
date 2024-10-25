@@ -249,3 +249,16 @@
 .bg-grey {
   background-color: #f6f6f6;
 }
+
+#testimonials-prev, #testimonials-next {
+  transition: all 0.3s ease-in-out;
+}
+
+#testimonials-prev:hover, #testimonials-next:hover {
+  background: #111112;
+
+  svg {
+    color: #fff;
+    fill: #fff;
+  }
+}
