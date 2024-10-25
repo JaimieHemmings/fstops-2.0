@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --gold-color: rgb(255, 228, 174);
+  --black-color: #111112;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.bg-off-black {
+  background-color: var(--black-color);
 }
 
 .gold-text {
@@ -12,6 +21,10 @@
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.inter {
+  font-family: "Inter", serif;
 }
 
 p {
@@ -30,6 +43,35 @@ p {
   svg {
     transform: translateY(-4px);
   }
+}
+
+.link-primary {
+  border-bottom: 2px solid #111112;
+  display: inline-block;
+  padding-bottom: 1rem;
+
+  span {
+    bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      bottom: 1.5rem;
+    }
+  }
+}
+
+.link-primary.white {
+  border-bottom: 2px solid #fff;
+}
+
+.bl-white {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.bb-white {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /** Navbar **/

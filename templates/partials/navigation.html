@@ -11,8 +11,8 @@
           </span>
       </a>
     </h1>
-    <div class="text-white hidden md:flex items-center justify-between gap-4">
-      <div class="px-5">
+    <div class="text-white flex items-center justify-between gap-4">
+      <div class="px-5 max-md:hidden">
         <p class="font-semibold text-sm pb-2">Photographer</p>
         <p class="font-semibold text-muted text-sm">(Based in Cornwall)</p>
       </div>
@@ -28,7 +28,7 @@
           </a>
         </p>
       </div>
-      <div class="px-5">
+      <div class="px-5 max-md:hidden">
         <a href="/" class="animate-arr flex justify-between align-items-baseline font-semibold">
           Instagram
           <span class="inline-block h-[20px] w-[20px] pl-1 relative">
@@ -49,34 +49,36 @@
     </div>
   </div>
 </section>
-<nav id="nav-overlay" class="absolute nav-container w-full h-screen md:h-[60vh] top-0 z-40 bg-black flex justify-between align-items-center">
-  <div class="hidden md:flex flex-col justify-around p-3">
-    <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-hawk.jpg' %}" alt="FStops Photography">
-    <h2 class="text-white text-5xl font-bold uppercase pb-0 p-5">FStops<br>Photography</h2>
-  </div>
-  <div class="h-full flex flex-col justify-center">
-    <ul class="text-white">
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">Home</a>
-      </li>
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">About</a>
-      </li>
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">Services</a>
-      </li>
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">Portfolio</a>
-      </li>
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">News</a>
-      </li>
-      <li class="font-semibold p-3">
-        <a class="text-xl" href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
-  <div class="hidden md:flex flex-col justify-end pb-5">
-    <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-hawk.jpg' %}" alt="FStops Photography">
+<nav id="nav-overlay" class="absolute nav-container w-full min-h-screen md:h-[60vh] top-0 z-40 bg-off-black">
+  <div class="container mx-auto h-full flex justify-between align-items-center">
+    <div class="hidden md:flex flex-col justify-around p-3">
+      <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-hawk.jpg' %}" alt="A girl posing with a predatory hawk">
+      <h2 class="text-white text-5xl font-bold uppercase pb-0 p-5">FStops<br>Photography</h2>
+    </div>
+    <div class="h-full flex flex-col justify-center max-md:min-h-screen max-md:w-full">
+      <ul class="text-white align-items-center h-full w-full flex flex-col justify-center">
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">Home</a>
+        </li>
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">About</a>
+        </li>
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">Services</a>
+        </li>
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">Portfolio</a>
+        </li>
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">News</a>
+        </li>
+        <li class="font-semibold p-3">
+          <a class="text-xl max-md:block text-center" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="hidden md:flex flex-col justify-end pb-5">
+      <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-telescope.jpg' %}" alt="A woman holding a telescope">
+    </div>
   </div>
 </nav>
