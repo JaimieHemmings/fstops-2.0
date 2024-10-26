@@ -33,16 +33,18 @@
 <body>
   {% include 'partials/navigation.html' %}
 
-{% if messages %}
-  <div class="message-container">
-  </div>
-{% endif %}
+  {% if messages %}
+    <div class="message-container">
+    </div>
+  {% endif %}
 
-{% block content %}
-{% endblock %}
+  {% block content %}
+  {% endblock %}
 
-{% block postload_js %}
-{% endblock %}
+  {% block postload_js %}
+  {% endblock %}
+
+  {% include 'partials/footer.html' %}
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

@@ -5,6 +5,10 @@
   --black-color: #111112;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f1f1f1;
 }

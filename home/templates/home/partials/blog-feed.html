@@ -1,35 +1,74 @@
 {% load static %}
 
-<section id="testimonials" class="w-full p-3 py-5">
-  <div class="container mx-auto flex flex-col justify-around py-[5rem] md:py-[10rem]">
-    
+<section class="py-[5rem] bg-white" id="faq">
+  <div class="container mx-auto p-3 pb-[5rem]">
     <div class="w-full border-t-2 pt-3 flex flex-row justify-between">
-      <h2 data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="inter font-semibold text-xl">Portfolio</h2>
-      <p data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="inter font-semibold text-xl">01</p>
+      <h2 class="inter font-semibold text-xl">Photographer's Diary</h2>
+      <p class="inter font-semibold text-xl">04</p>
     </div>
-    <div class="block md:flex flex-row pt-20 h-full justify-between mb-[5rem]">
-      <div class="basis-1/2 p-3" data-aos="fade-in" data-aos-delay="50"
+  </div>
+  <div class="container mx-auto flex flex-col md:flex-row justify-between gap-4">
+    <div class="basis-1/3 flex flex-col justify-between p-3">
+      <div data-aos="fade-in" data-aos-delay="50"
       data-aos-duration="1000">
-        <h3 class="inter text-7xl font-semibold">See the magic for yourself</h3>
+        <h2 class="inter text-7xl font-semibold pb-5">
+          My blog
+        </h2>
+        <p class="inter opacity-[0.6] font-semibold text-xl pt-5">
+          Curious about that goes into a perfect photoshoot? Check out my latest tips and behind-the-scenes stories.
+        </p>
       </div>
-      <div class="basis-1/2 flex flex-row justify-between" data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000">
-        <div class="basis-1/2 p-3">
-          <p class="inter text-xl opacity-[0.6] font-semibold">Browse a curated collection of moments that have made their way into the hearts of clients.</p>
-        </div>
-        <div class="basis-1/2 p-3">
-          <h3 class="inter font-semibold">What's my style?</h3>
-          <p class="inter text-base opacity-[0.6]">Natural, emotive, and storytelling focused. I aim to capture the real you.</p>
-        </div>
+      <div>
+        <a href="/" class="font-bold inter text-base md:text-2xl link-primary relative mt-5" target="_blank">
+          View all
+          <span class="inline-block absolute">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(0,0,0); color: rgb(0,0,0); flex-shrink: 0;"
+              focusable="false"
+              class="inline ml-3"
+              color="rgb(0, 0, 0)">
+              <g color="rgb(0, 0, 0)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
-    <div class="flex flex-row justify-between flex-wrap pt-5">
-      {% include 'home/partials/blog-feed-item.html' %}
-      {% include 'home/partials/blog-feed-item.html' %}
-      {% include 'home/partials/blog-feed-item.html' %}
-      {% include 'home/partials/blog-feed-item.html' %}
+    <div class="basis-2/3 p-3 flex flex-col lg:flex-row justify-between gap-8">
+      <a data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg relative" style="background-image:url({% static 'home/img/blog-thumb.avif' %})">
+        <div class="flex flex-row justify-between w-full relative z-20 pb-[3rem] md:pb-[20rem]">
+          <p class="inter text-base font-semibold text-white">OCT 11, 2024</p>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(255,255,255); color: rgb(255,255,255); flex-shrink: 0;"
+            focusable="false"
+            class="inline ml-3"
+            color="rgb(255,255,255)">
+            <g color="rgb(255,255,255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+          </svg>
+        </div>
+        <div class="p-3 relative z-20">
+          <h3 class="inter text-2xl font-semibold text-white">Why every business needs professional photography</h3>
+        </div>
+      </a>
+      <a data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg text-white relative" style="background-image:url({% static 'home/img/blog-thumb.avif' %})">
+        <div class="flex flex-row justify-between w-full relative z-20 pb-[3rem] md:pb-[20rem]">
+          <p class="inter text-base font-semibold">OCT 11, 2024</p>
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(255,255,255); color: rgb(255,255,255); flex-shrink: 0;"
+            focusable="false"
+            class="inline ml-3"
+            color="rgb(255,255,255)">
+            <g color="rgb(255,255,255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+          </svg>
+        </div>
+        <div class="p-3 relative z-20">
+          <h3 class="inter text-2xl font-semibold text-white">Why every business needs professional photography</h3>
+        </div>
+      </a>
     </div>
   </div>
 </section>
