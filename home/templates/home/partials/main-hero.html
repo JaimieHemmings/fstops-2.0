@@ -7,20 +7,23 @@
       <div class="circle absolute z-10 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
       </div>
 
-      <h1 class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
+      <h1 data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
         {% if title %}
           {{ title }}
         {% else %}
           ART IN FOCUS
         {% endif %}
       </h1>
-      <p class="text-5xl md:text-8xl text-white mb-[5rem] md:mb-[10rem] leading-[0.8] font-bold mt-1">
+      <p data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" class="text-5xl md:text-8xl text-white mb-[5rem] md:mb-[10rem] leading-[0.8] font-bold mt-1">
         {% if subtitle %}
           {{ subtitle }}
         {% else %}
           YOUR STORY
         {% endif %}
-        <span class="playfair-display text-4xl md:text-6xl mt-1 block italic gold-text">
+        <span data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="playfair-display text-4xl md:text-6xl mt-1 block italic gold-text">
           {% if span %}
             {{ span }}
           {% else %}
