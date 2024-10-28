@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="pt-[5rem]">
+  <div class="container mx-auto py-[5rem] pb-0 px-3">
+    <div class="relative">
+      <div class="relative md:absolute top-0 left-0 text-xl">
+        <div class="relative pr-[22rem] max-md:px-3">
+          <h2 class="font-bold uppercase max-md:text-lg"  data-aos="fade-in">Benjamin Wyatt</h2>
+          <p class="opacity-[0.6] max-md:text-sm pb-5 pt-1"  data-aos="fade-in">Professional Photographer</p>
+          <svg data-aos="fade-in" fill="#cdcdcd" version="1.1" id="Capa_1" class="md:absolute right-0 top-0 max-md:pb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+          width="50px" height="50px" viewBox="0 0 349.078 349.078"
+          xml:space="preserve"><g><path d="M150.299,26.634v58.25c0,7.9-6.404,14.301-14.304,14.301c-28.186,0-43.518,28.909-45.643,85.966h45.643
+            c7.9,0,14.304,6.407,14.304,14.304v122.992c0,7.896-6.404,14.298-14.304,14.298H14.301C6.398,336.745,0,330.338,0,322.447V199.455
+            c0-27.352,2.754-52.452,8.183-74.611c5.568-22.721,14.115-42.587,25.396-59.048c11.608-16.917,26.128-30.192,43.16-39.44
+            C93.886,17.052,113.826,12.333,136,12.333C143.895,12.333,150.299,18.734,150.299,26.634z M334.773,99.186
+            c7.896,0,14.305-6.407,14.305-14.301v-58.25c0-7.9-6.408-14.301-14.305-14.301c-22.165,0-42.108,4.72-59.249,14.023
+            c-17.035,9.248-31.563,22.523-43.173,39.44c-11.277,16.461-19.824,36.328-25.393,59.054c-5.426,22.166-8.18,47.266-8.18,74.605
+            v122.992c0,7.896,6.406,14.298,14.304,14.298h121.69c7.896,0,14.299-6.407,14.299-14.298V199.455
+            c0-7.896-6.402-14.304-14.299-14.304h-44.992C291.873,128.095,306.981,99.186,334.773,99.186z"/>
+          </g></svg>
+        </div>
+      </div>
+      <p data-aos="fade-in" class="text-3xl md:text-6xl md:indent-[38rem] font-semibold inter">
+        A really long string of text with some inspirational stuff maybe as an intro to the services page. This is a placeholder text and should be replaced with something more meaningful.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="block md:flex flex-row container mx-auto md:gap-20 py-[5rem]">
+  <div class="block md:flex gap-4 flex-col justify-between md:w-2/3">
+    <div class="block lg:flex flex-row justify-between gap-4 md:gap-16 pb-5">
+      <p data-aos-delay="50"
+      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">Whether you're celebrating love, family, or personal milestones, I'm here to help you capture it all. Let's tell your story through timeless photography.</p>
+      <div class=" basis-1/2 max-lg:py-[5rem] align-baseline max-md:pt-5 flex flex-row justify-between">
+        <p class="inter opacity-[0.6] text-base font-semibold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium enim, provident quae qui praesentium repellendus in ea possimus earum quo voluptatibus et, exercitationem eius fugit dolor ipsa eaque? Voluptas, dicta.
+        </p>
+      </div>
+    </div>
+    <img src="{% static 'img/maven.webp' %}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
+  </div>
+  <div data-aos-delay="50"
+  data-aos-duration="1000" data-aos="fade-in" class="md:w-1/3 block md:flex flex-col justify-between p-3">
+    <div class="rounded-lg bg-white p-5 mb-5">
+      <img data-aos-delay="50"
+      data-aos-duration="1000" data-aos="fade-in" src="{% static 'img/selfie.jpg' %}" alt="A mans silhouette exposed against the colourful evening sky" class="max-w-full rounded-lg mb-5" />
+      <h2 class="text-xl inter font-semibold pb-3">Ready to capture your moments?</h2>
+      <div class="flex flex-row">
+        <div class="w-2/3">
+          <p class="inter">Book your photoshoot today and let's turn your vision into a timeless art</p>
+        </div>
+        <div class="w-1/3 text-center flex flex-col justify-end">
+          <div>
+            <a href="{% url 'contact' %}" class="bg-off-black rounded-full inline-block">
+              <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              style="user-select: none; width: 40px; height: 40px; display: block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"
+              focusable="false"
+              class="p-2"
+              color="rgb(255, 255, 255)">
+              <g color="rgb(255, 255, 255)" weight="regular">
+                <path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <a data-aos-delay="50"
+    data-aos-duration="1000" data-aos="fade-in" href="{% url 'portfolio' %}" class="font-semibold inter text-xl link-primary relative mt-5">
+      Check out my work
+      <span class="inline-block absolute">
+        <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); flex-shrink: 0;"
+        focusable="false"
+        class="inline ml-3"
+        color="rgb(255, 255, 255)">
+        <g color="rgb(255, 255, 255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+      </svg>
+    </span>
+    </a>
+  </div>
+</section>
+{% endblock %}

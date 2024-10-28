@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="flex flex-col justify-end center-bg-img relative" style="background-image:url('{{item.thumbnail.url}}')">
+  <div class="dark-overlay relative pt-[10rem] px-3">
+    <div class="container mx-auto pt-[10rem] pb-5">
+      <p class="text-white inter opacity-[0.6] text-2xl pb-3 font-semibold relative z-20">
+        {{item.date|date:"d M Y"}} <span class="opacity-[0.6] font-thin">|</span> <span class="text-base align-middle">{{item.category}}</span>
+      </p>
+      <h1 class="text-white inter text-7xl font-semibold relative z-20 pb-5">
+        {{item.title}}
+      </h1>
+    </div>
+  </div>
+
+  <div class="top-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center z-30">
+    <div class="border-corner border-right-0 border-bottom-0"></div>
+    <div class="border-corner border-left-0 border-bottom-0"></div>
+  </div>
+  <div class="bottom-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+    <div class="border-corner border-top-0 border-right-0"></div>
+    <div class="border-corner border-top-0 border-left-0"></div>
+  </div>
+
+</section>
+<section class="container mx-auto py-[5rem] article-body px-3">
+  {{item.body|safe}}
+</section>
+<section class="md:flex flex-row justify-between h-full">
+  <div class="basis-1/2 relative">
+    <div class="sticky top-0">
+      <img src="{{item.img_one.url}}" alt="{{item.img_one_alt}}" class="w-full h-auto object-fit" />
+      <img src="{{item.img_two.url}}" alt="{{item.img_two_alt}}" class="w-full h-auto object-fit" />
+      <img src="{{item.img_three.url}}" alt="{{item.img_three_alt}}" class="w-full h-auto object-fit" />
+    </div>
+  </div>
+  <div class="basis-1/2">
+    <img src="{{item.img_four.url}}" alt="{{item.img_four_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_five.url}}" alt="{{item.img_five_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_six.url}}" alt="{{item.img_six_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_seven.url}}" alt="{{item.img_seven_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_eight.url}}" alt="{{item.img_eight_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_nine.url}}" alt="{{item.img_nine_alt}}" class="w-full h-auto object-fit" />
+    <img src="{{item.img_ten.url}}" alt="{{item.img_ten_alt}}" class="w-full h-auto object-fit" />
+  </div>
+</section>
+{% endblock %}

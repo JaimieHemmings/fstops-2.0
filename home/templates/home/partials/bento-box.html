@@ -1,11 +1,11 @@
 {% load static %}
 
 <section class="block md:flex flex-row container mx-auto md:gap-20 py-[5rem]">
-  <div class="block md:flex flex-col justify-between md:w-2/3">
-    <div class="block lg:flex flex-row justify-between gap-8 md:gap-16 pb-5">
+  <div class="block md:flex gap-4 flex-col justify-between md:w-2/3">
+    <div class="block lg:flex flex-row justify-between gap-4 md:gap-16 pb-5">
       <p data-aos-delay="50"
-      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl">Whether you're celebrating love, family, or personal milestones, I'm here to help you capture it all. Let's tell your story through timeless photography.</p>
-      <div class="max-lg:py-[5rem] p-3 align-baseline max-md:pt-5 flex flex-row justify-between">
+      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">Whether you're celebrating love, family, or personal milestones, I'm here to help you capture it all. Let's tell your story through timeless photography.</p>
+      <div class=" basis-1/2 max-lg:py-[5rem] p-3 align-baseline max-md:pt-5 flex flex-row justify-between">
         <div class="min-w-[40px]">
           <img data-aos-delay="50"
           data-aos-duration="1000" data-aos="fade-in" src="{% static 'img/review-img.png' %}" alt="Quotation mark" class="max-w-full rounded-full h-auto" />
@@ -45,7 +45,7 @@
         </div>
         <div class="w-1/3 text-center flex flex-col justify-end">
           <div>
-            <a href="#" class="bg-off-black rounded-full inline-block">
+            <a href="{% url 'contact' %}" class="bg-off-black rounded-full inline-block">
               <svg xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
               style="user-select: none; width: 40px; height: 40px; display: block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"
@@ -62,7 +62,7 @@
       </div>
     </div>
     <a data-aos-delay="50"
-    data-aos-duration="1000" data-aos="fade-in" href="/" class="font-semibold inter text-xl link-primary relative mt-5">
+    data-aos-duration="1000" data-aos="fade-in" href="{% url 'portfolio' %}" class="font-semibold inter text-xl link-primary relative mt-5">
       Check out my work
       <span class="inline-block absolute">
         <svg xmlns="http://www.w3.org/2000/svg"

@@ -7,32 +7,32 @@
 
 {% block content %}
 <section class="py-[3rem] flex flex-col md:flex-row container mx-auto p-3 pt-[10rem] relative">
-  <div class="basis-1/4 relative">
+  <div class="basis-1/4 relative max-md:mb-5">
     <div class="md:sticky top-[1rem]">
-      <div class="flex flex-row justify-between">
+      <div class="flex flex-row justify-start">
         <div class="basis-1/5">
           <img src="{% static 'home/img/small-selfie.avif' %}" class="max-w-full w-14 h-14 object-fit rounded-md">
         </div>
-        <div class="basis-4/5">
+        <div class="basis-4/5 max-md px-3">
           <h2 class="inter font-semibold text-xl pb-1">Ben Hollington</h2>
           <p class="inter font-semibold text-xl opacity-[0.6]">Professional Photographer</p>
         </div>
       </div>
       <div class="py-5">
-        <a href="/" class="pr-[50px] font-bold inter text-base link-primary relative mt-5" target="_blank">
-      </div>
+        <a href="{% url 'contact' %}" class="font-bold inter text-base link-primary relative mt-5" target="_blank">
         Book your session
-        <span class="inline-block absolute">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(0,0,0); color: rgb(0,0,0); flex-shrink: 0;"
-            focusable="false"
-            class="inline ml-3"
-            color="rgb(0, 0, 0)">
-            <g color="rgb(0, 0, 0)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
-          </svg>
-        </span>
-      </a>
+          <span class="inline-block absolute">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 256 256"
+              style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(0,0,0); color: rgb(0,0,0); flex-shrink: 0;"
+              focusable="false"
+              class="inline ml-3"
+              color="rgb(0, 0, 0)">
+              <g color="rgb(0, 0, 0)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
   <div class="basis-3/4">

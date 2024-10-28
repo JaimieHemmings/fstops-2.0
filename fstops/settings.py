@@ -30,8 +30,15 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
 
+    # ckeditor
+    'ckeditor',
+
     # Custom Apps
     "home",
+    "contact",
+    "blog",
+    "portfolio",
+    "services",
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -137,7 +144,23 @@ USE_I18N = True
 
 USE_TZ = True
 
+# CKEditor Settings
 
+# CKEditor Settings
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+CKEDITOR_CONFIGS = {
+    'default':
+        {
+            'toolbar': 'basic',
+            'width': 'auto',
+            'extraPlugins': ','.join([
+                'codesnippet',
+            ]),
+        },
+}
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

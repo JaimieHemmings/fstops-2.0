@@ -17,11 +17,11 @@
     </div>
     <div class="basis-1/4 p-3 max-md:py-[2rem]">
       <ul>
-        <li class="py-2"><a class="text-white text-2xl inter font-bold" href="#">Home</a></li>
-        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="#">Portfolio</a></li>
-        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="#">Blog</a></li>
-        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="#">About me</a></li>
-        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="#">Contact</a></li>
+        <li class="py-2"><a class="text-white text-2xl inter font-bold" href="{% url 'home' %}">Home</a></li>
+        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="{% url 'blog' %}">News</a></li>
+        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="{% url 'about' %}">About me</a></li>
+        <li class="py-2"><a class="text-white text-2xl inter font-bold"  href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
   </div>

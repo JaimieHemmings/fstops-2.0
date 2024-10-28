@@ -35,10 +35,11 @@
       </div>
     </div>
     <div class="basis-2/3 p-3 flex flex-col lg:flex-row justify-between gap-8">
+      {% for article in articles %}
       <a data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg relative" style="background-image:url({% static 'home/img/blog-thumb.avif' %})">
+      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg relative" style="background-image:url({{ article.thumbnail.url }})">
         <div class="flex flex-row justify-between w-full relative z-20 pb-[3rem] md:pb-[20rem]">
-          <p class="inter text-base font-semibold text-white">OCT 11, 2024</p>
+          <p class="inter text-base font-semibold text-white">{{article.date|date:"M d, Y"}}</p>
           <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 256 256"
             style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(255,255,255); color: rgb(255,255,255); flex-shrink: 0;"
@@ -49,26 +50,10 @@
           </svg>
         </div>
         <div class="p-3 relative z-20">
-          <h3 class="inter text-2xl font-semibold text-white">Why every business needs professional photography</h3>
+          <h3 class="inter text-2xl font-semibold text-white">{{ article.title }}</h3>
         </div>
       </a>
-      <a data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg text-white relative" style="background-image:url({% static 'home/img/blog-thumb.avif' %})">
-        <div class="flex flex-row justify-between w-full relative z-20 pb-[3rem] md:pb-[20rem]">
-          <p class="inter text-base font-semibold">OCT 11, 2024</p>
-          <svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(255,255,255); color: rgb(255,255,255); flex-shrink: 0;"
-            focusable="false"
-            class="inline ml-3"
-            color="rgb(255,255,255)">
-            <g color="rgb(255,255,255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
-          </svg>
-        </div>
-        <div class="p-3 relative z-20">
-          <h3 class="inter text-2xl font-semibold text-white">Why every business needs professional photography</h3>
-        </div>
-      </a>
+      {% endfor %}
     </div>
   </div>
 </section>

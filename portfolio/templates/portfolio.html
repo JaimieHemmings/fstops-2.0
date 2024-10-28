@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="text-center mx-auto container py-[10rem] pb-[3rem]">
+  <h1 class="inter text-5xl md:text-7xl font-semibold pb-5 max-w-[50%]">A showcase of captured moments</h1>
+  <p class="inter opacity-[0.6] text-2xl md:text-4xl font-semibold">Exploring stories through the lens, one moment at a time.</p>
+</section>
+<section class="container mx-auto flex flex-col py-[3rem] gap-8 px-3">
+{% for portfolio in page_obj %}
+  <a href="{% url 'portfolio_item' portfolio.slug %}" class="flex flex-col justify-center align-middle rounded-lg text-center py-[20rem] dark-overlay relative center-bg-img overflow-hidden" style="background-image:url('{{portfolio.thumbnail.url}}')">
+    <p class="text-white relative z-20 opacity-[0.6] inter font-semibold text-2xl">{{portfolio.date|date:"d M Y"}} <span class="opacity-[0.6] font-thin">|</span> <span class="text-base align-middle">{{portfolio.category}}</span></p>
+    <h2 class="relative z-20 inter font-semibold text-5xl pt-5 text-white">{{portfolio.title}}</h2>
+
+    
+
+    <div class="top-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center z-30">
+      <div class="border-corner border-right-0 border-bottom-0"></div>
+      <div class="border-corner border-left-0 border-bottom-0"></div>
+    </div>
+    <div class="bottom-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+      <div class="border-corner border-top-0 border-right-0"></div>
+      <div class="border-corner border-top-0 border-left-0"></div>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+<section class="mx-auto container py-5 px-3">
+  <div class="pagination flex flex-row justify-between">
+    <div>
+      {% if page_obj.has_previous %}
+        <a href="?page=1" class="inter font-semibold text-xl">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="inter font-semibold text-xl">previous</a>
+      {% endif %}
+    </div>
+    <div>
+      <span class="current inter font-semibold text-xl">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+      </span>
+    </div>
+    <div>
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="inter font-semibold text-xl">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="inter font-semibold text-xl">last &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

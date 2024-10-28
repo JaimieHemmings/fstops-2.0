@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="py-[10rem] pb-[5rem] p-5">
+  {% include 'home/partials/quote-large.html' with quote="Photography is more than capturing moments; it's about revealing the beauty in the unseen. Every image tells a story waiting to be shared." %}
+</div>
+
+<section class="py-[5rem]">
+  <div class="mx-auto container p-3">    
+    <div class="md:grid md:grid-cols-3 md:grid-rows-6 gap-4 mt-4 w-full">
+      <!-- Column 1 -->
+      <a
+        href="{% url 'services_headshots' %}" 
+        data-aos="fade-in"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="relative overflow-hidden col-start-1 row-start-1 row-span-4 col-span-1 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay" style="background-image: url({% static 'home/img/street-shot.avif' %});"
+      >
+        <h2 class="text-2xl text-white font-semibold relative z-20">Headshots</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">Some stuff here</p>
+      </a>
+      <a
+        href="{% url 'services_event' %}" 
+        data-aos="fade-in"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="relative overflow-hidden col-start-1 row-start-5 row-span-2 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay" style="background-image:url({% static 'home/img/woman-pose.avif' %})"
+      >
+        <h2 class="text-2xl text-white font-semibold relative z-20">Event</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">Some stuff here</p>
+      </a>
+    
+      <!-- Column 2 -->
+      <a
+        href="{% url 'services_lifestyle' %}" 
+        data-aos="fade-in"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="relative overflow-hidden col-start-2 row-start-1 row-span-3 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay"
+        style="background-image: url({% static 'home/img/woman-in-tall-grass.jpg' %});"
+      >
+        <h2 class="text-2xl text-white font-semibold relative z-20">Lifestyle</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">Some stuff here</p>
+      </a>
+      <a
+        href="{% url 'services_product' %}" 
+        data-aos="fade-in"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="relative overflow-hidden col-start-2 row-start-4 row-span-3 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay" style="background-image: url({% static 'home/img/equipment.png' %});">
+        <h2 class="text-2xl text-white font-semibold relative z-20">Product</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">Some stuff here</p>
+      </a>
+    
+      <!-- Column 3 -->
+      <a
+        href="{% url 'services_property' %}" 
+        data-aos="fade-in"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        class="relative overflow-hidden col-start-3 row-start-1 row-span-2 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay" style="background-image:url({% static 'home/img/woman-pose.avif' %})"
+      >
+        <h2 class="text-2xl text-white font-semibold relative z-20">Property</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">Some stuff here</p>
+      </a>
+      <a
+        href="{% url 'services_aerial' %}" 
+        class="relative overflow-hidden col-start-3 row-start-3 row-span-4 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay"
+        style="background-image:url({% static 'home/img/woman-pose.avif' %})"
+      >
+        <h2 class="text-2xl text-white font-semibold relative z-20">Aerial</h2>
+        <p class="text-white font-semibold opacity-[0.6] relative z-20">
+          Some stuff here
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+  {% include 'home/partials/testimonials.html' %}
+{% endblock %}

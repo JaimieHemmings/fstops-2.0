@@ -10,13 +10,17 @@
 
 {% block content%}
   {% include 'home/partials/main-hero.html' with title="ART IN FOCUS" subtitle="YOUR STORY" span="Captured" %}
-  {% include 'home/partials/quote-large.html' %}
+  {% include 'home/partials/quote-large.html' with quote="I don't just take photos I capture the raw emotions, the subtle moments, and the untold stories that make life so beautiful." %}
   {% include 'home/partials/bento-box.html' %}
   {% include 'home/partials/offer.html' %}
   {% include 'home/partials/assertions.html' %}
-  {% include 'home/partials/portfolio-feed.html' %}
+  {% if portfolio_items %}
+    {% include 'home/partials/portfolio-feed.html' %}
+  {% endif %}
   {% include 'home/partials/testimonials.html' %}
   {% include 'home/partials/cta.html' %}
   {% include 'home/partials/faq.html' %}
-  {% include 'home/partials/blog-feed.html' %}
+  {% if articles %}
+    {% include 'home/partials/blog-feed.html' %}
+  {% endif %}
 {% endblock %}

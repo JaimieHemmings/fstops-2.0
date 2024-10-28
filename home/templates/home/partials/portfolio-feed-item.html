@@ -1,21 +1,23 @@
 {% load static %}
 
+{% for item in portfolio_items %}
 <a data-aos="fade-in" data-aos-delay="50"
-data-aos-duration="1000" href="/" class="block md:basis-1/2 p-3">
-  <img src="{% static 'home/img/equipment.png' %}" class=" rounded-lg w-full h-auto" alt="An example text">
-  <div class="p-3 flex flex-row justify-between">
+data-aos-duration="1000" href="{% url 'portfolio_item' item.slug %}" class="block md:basis-1/2 p-3">
+  <img src="{{ item.thumbnail.url }}" class=" rounded-lg w-full h-auto" alt="An example text">
+  <div class="p-3 flex flex-row justify-between gap-4">
     <div>
       <h3 class="inter font-semibold text-4xl pb-3">
-        Posing on a chair
+        {{ item.title }}
       </h3>
       <p class="inter opacity-[0.6] font-semibold text-xl">
-        Studio Photography
+        {{item.category}}
       </p>
     </div>
     <div>
       <p class="inter opacity-[0.6] font-bold text-3xl">
-        10/9/24
+        {{item.date|date:"d/m/y"}}
       </p>
     </div>
   </div>
 </a>
+{% endfor %}
