@@ -1,7 +1,10 @@
 {% load static %}
 <header>
   <div class="wrapper relative w-full overflow-hidden dark-overlay grid-overlay"> 
-    <iframe style="width:100%;aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/89l6ZuW_QDc?autoplay=1&loop=1&mute=1&controls=0&playlist=89l6ZuW_QDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; modestbranding; playsinline" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <video width="100%" height="auto" preload="none" controls autoplay playsinline loop>
+      <source src="{% static 'home/videos/banner-video.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> 
 
     <div class="content absolute z-20 w-full top-0 left-0 text-center h-full flex flex-col justify-end">
       <div class="circle absolute z-20 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
