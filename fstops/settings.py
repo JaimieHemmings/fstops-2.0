@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme',
     'django_browser_reload',
+    'storages',
 
     # AllAuth
     'django.contrib.sites',
