@@ -214,3 +214,11 @@ if "USE_AWS" in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
+
+    CSRF_TRUSTED_ORIGINS = [
+    'https://www.fstops.co.uk',
+    'https://fstops.co.uk',
+    'https://fstop-photography-6e5dee6954eb.herokuapp.com',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000/',
+]
