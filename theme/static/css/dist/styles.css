@@ -1073,6 +1073,10 @@ select {
   max-height: 0px;
 }
 
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+
 .min-h-\[30vh\] {
   min-height: 30vh;
 }
@@ -1350,6 +1354,10 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#\] {
+  background-color: #;
+}
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -1435,6 +1443,11 @@ select {
 .py-\[20rem\] {
   padding-top: 20rem;
   padding-bottom: 20rem;
+}
+
+.py-\[2rem\] {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-\[3rem\] {
@@ -1719,6 +1732,10 @@ select {
     grid-row-start: 1;
   }
 
+  .max-lg\:hidden {
+    display: none;
+  }
+
   .max-lg\:py-\[5rem\] {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1766,6 +1783,11 @@ select {
     justify-content: center;
   }
 
+  .max-md\:bg-\[\#111112\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 18 / var(--tw-bg-opacity));
+  }
+
   .max-md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -1784,6 +1806,16 @@ select {
   .max-md\:py-\[4rem\] {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .max-md\:py-\[3rem\] {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .max-md\:py-\[5rem\] {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .max-md\:pb-3 {
@@ -1811,6 +1843,17 @@ select {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .max-md\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .max-sm\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1832,12 +1875,12 @@ select {
     position: sticky;
   }
 
-  .md\:mb-\[10rem\] {
-    margin-bottom: 10rem;
-  }
-
   .md\:ml-\[50\%\] {
     margin-left: 50%;
+  }
+
+  .md\:mb-\[5rem\] {
+    margin-bottom: 5rem;
   }
 
   .md\:flex {
@@ -1846,6 +1889,10 @@ select {
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-\[60vh\] {
@@ -1870,6 +1917,10 @@ select {
 
   .md\:basis-1\/2 {
     flex-basis: 50%;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {
@@ -1913,6 +1964,10 @@ select {
 
   .md\:pb-\[20rem\] {
     padding-bottom: 20rem;
+  }
+
+  .md\:pb-\[2rem\] {
+    padding-bottom: 2rem;
   }
 
   .md\:pb-\[3rem\] {
@@ -1970,6 +2025,11 @@ select {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 
