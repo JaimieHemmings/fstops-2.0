@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
-<div class="py-[10rem] pb-[5rem] p-5">
+<div class="pt-[5rem] md:pb-[2rem] p-5">
   {% include 'home/partials/quote-large.html' with quote="Photography is more than capturing moments; it's about revealing the beauty in the unseen. Every image tells a story waiting to be shared." %}
 </div>
 
-<section class="py-[5rem]">
+<section class="py-[2rem]">
   <div class="mx-auto container p-3">    
-    <div class="md:grid md:grid-cols-3 md:grid-rows-6 gap-4 mt-4 w-full">
+    <div class="md:grid md:grid-cols-2 md:grid-rows-6 gap-4 mt-4 w-full">
 
       {% for service in services %}
       <a
@@ -28,12 +28,6 @@
       {% endif %}
       {% if forloop.counter == 4 %}
         class="relative overflow-hidden col-start-2 row-start-4 row-span-3 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay"
-      {% endif %}
-      {% if forloop.counter == 5 %}
-        class="relative overflow-hidden col-start-3 row-start-1 row-span-2 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay"
-      {% endif %}
-      {% if forloop.counter == 6 %}
-        class="relative overflow-hidden col-start-3 row-start-3 row-span-4 p-5 center-bg-img rounded-lg flex flex-col justify-end pt-[10rem] max-md:mb-4 dark-overlay"
       {% endif %}
 
         style="background-image: url({{ service.background_image.url }});"
