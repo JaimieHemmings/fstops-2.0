@@ -15,8 +15,18 @@ class Portfolio(models.Model):
     
 
     def save(self, *args, **kwargs):
-        self.slug = self.generate_slug()
+        # Check if the title has changed
+        if self.pk is not None:
+            # Fetch the existing object from the database
+            existing_obj = Portfolio.objects.get(pk=self.pk)
+            if existing_obj.title != self.title:
+                self.slug = self.generate_slug()
+        else:
+            # New object, generate slug
+            self.slug = self.generate_slug()
+        
         return super().save(*args, **kwargs)
+    
   
     def generate_slug(self, save_to_obj=False, add_random_suffix=True):
         generated_slug = slugify(self.title)
