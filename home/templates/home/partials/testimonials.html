@@ -20,17 +20,10 @@
         </div>
       </div>
       <div class="basis-2/3 px-5 min-h-[30vh]" id="testimonials-container">
-        {% include 'home/partials/testimonial.html' with mainBody="This year I'd like to pass some special thanks to the legend that is Ben  Hollington, for being such a quality photographer for the AOF Lure Festival weekend!" snippet="Highly recommend for anyone looking for top-notch photography!" rating="5.0" author="John Doe" author_img="img/review-img.png" %}
 
-        {% include 'home/partials/testimonial.html' with mainBody="The photos are stunning — capturing every moment perfectly. Plus, their friendly and professional demeanour made the entire process enjoyable." snippet="Highly recommend for anyone looking for top-notch photography!" rating="5.0" author="JHemmings Web Design" author_img="img/review-img.png"  %}
-
-        {% include 'home/partials/testimonial.html' with mainBody="Another Example" snippet="Some other stuff" rating="5.0" author="John Doe" author_img="img/review-img.png" %}
-
-        {% include 'home/partials/testimonial.html' with mainBody="Yet more Example" snippet="Some other stuff" rating="5.0" author="John Doe" author_img="img/review-img.png" %}
-
-        {% include 'home/partials/testimonial.html' with mainBody="Can't think of anything" snippet="Some other stuff" rating="5.0" author="John Doe" author_img="img/review-img.png" %}
-
-        {% include 'home/partials/testimonial.html' with mainBody="Last One" snippet="Some other stuff" rating="5.0" author="John Doe" author_img="img/review-img.png" %}
+        {% for review in reviews %}
+          {% include 'home/partials/testimonial.html' with mainBody=review.review snippet=review.snippet rating="5.0" author=review.name author_img=review.img.url %}
+        {% endfor %}
       </div>
     </div>
   </div>

@@ -1,17 +1,17 @@
 {% load static %}
 
-<section class="absolute top-0 left-0 w-full z-50 p-1 pt-3 px-5">
+<section class="absolute top-0 left-0 w-full z-50 p-1 pt-3 px-5 bg-white">
   <div
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    class="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 z-20"
   >
     <h1>
       <a href="/" class="flex items-center space-x-3">
-          <span class="inter self-center text-2xl font-bold whitespace-nowrap {% if nbar == 'home' %}text-white{% endif %}">
+          <span class="inter self-center text-5xl font-bold whitespace-nowrap">
             F.
           </span>
       </a>
     </h1>
-    <div class="{% if nbar == 'home' %}text-white{% endif %} flex items-center justify-between gap-4 inter">
+    <div class="flex items-center justify-between gap-4 inter">
       <div class="px-5 max-md:hidden">
         <p class="font-semibold text-sm pb-2 inter">Photographer</p>
         <p class="font-semibold opacity-[0.6] text-sm inter">(Based in Cornwall)</p>
@@ -35,17 +35,10 @@
             <svg xmlns="http://www.w3.org/2000/svg"
               class="top-[3px] absolute"
               viewBox="0 0 256 256"
-              {% if nbar == 'home' %}
-              style="user-select: none; width: 20px; height: 20px; display: block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"
-              focusable="false"
-              color="rgb(255, 255, 255)">
-              <g color="rgb(255, 255, 255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
-              {% else %}
               style="user-select: none; width: 20px; height: 20px; display: block; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); flex-shrink: 0;"
               focusable="false"
               color="rgb(0, 0, 0)">
               <g color="rgb(0, 0, 0)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
-              {% endif %}
             </svg>
           </span>
         </a>
@@ -63,24 +56,24 @@
       <h2 class="text-white text-5xl font-bold uppercase pb-0 p-5">FStops<br>Photography</h2>
     </div>
     <div class="h-full flex flex-col justify-center max-md:min-h-screen max-md:w-full">
-      <ul class="text-white align-items-center h-full w-full flex flex-col justify-center">
+      <ul class="align-items-center h-full w-full flex flex-col justify-center text-white">
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'home' %}">Home</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'home' %}">Home</a>
         </li>
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'about' %}">About</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'about' %}">About</a>
         </li>
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'services' %}">Services</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'services' %}">Services</a>
         </li>
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'portfolio' %}">Portfolio</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'portfolio' %}">Portfolio</a>
         </li>
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'blog' %}">News</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'blog' %}">News</a>
         </li>
         <li class="font-semibold p-3">
-          <a class="text-xl max-md:block text-center" href="{% url 'contact' %}">Contact</a>
+          <a class="text-xl max-md:block text-center inter" href="{% url 'contact' %}">Contact</a>
         </li>
       </ul>
     </div>

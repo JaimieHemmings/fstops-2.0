@@ -1,28 +1,20 @@
 from django.shortcuts import render
+from home.models import Review
+from .models import Service
 
 def services(request):
-    return render(request, "services/services.html")
+    reviews = Review.objects.all()
+    services = Service.objects.all()
+    context = {
+        'services': services,
+        'reviews': reviews
+    }
+    return render(request, "services/services.html", context)
 
 
-def services_headshots(request):
-    return render(request, "services/service-page.html")
-
-
-def services_event(request):
-    return render(request, "services/service-page.html")
-
-
-def services_lifestyle(request):
-    return render(request, "services/service-page.html")
-
-
-def services_product(request):
-    return render(request, "services/service-page.html")
-
-
-def services_property(request):
-    return render(request, "services/service-page.html")
-
-
-def services_aerial(request):
-    return render(request, "services/service-page.html")
+def service_details(request, title):
+    service = Service.objects.get(name=title)
+    context = {
+        'service': service
+    }
+    return render(request, "services/service-page.html", context)

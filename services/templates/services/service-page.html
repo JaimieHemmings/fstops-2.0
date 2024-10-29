@@ -22,7 +22,7 @@
         </div>
       </div>
       <p data-aos="fade-in" class="text-3xl md:text-6xl md:indent-[38rem] font-semibold inter">
-        A really long string of text with some inspirational stuff maybe as an intro to the services page. This is a placeholder text and should be replaced with something more meaningful.
+        {{ service.quote }}
       </p>
     </div>
   </div>
@@ -31,14 +31,14 @@
   <div class="block md:flex gap-4 flex-col justify-between md:w-2/3">
     <div class="block lg:flex flex-row justify-between gap-4 md:gap-16 pb-5">
       <p data-aos-delay="50"
-      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">Whether you're celebrating love, family, or personal milestones, I'm here to help you capture it all. Let's tell your story through timeless photography.</p>
+      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">{{ service.description }}</p>
       <div class=" basis-1/2 max-lg:py-[5rem] align-baseline max-md:pt-5 flex flex-row justify-between">
         <p class="inter opacity-[0.6] text-base font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium enim, provident quae qui praesentium repellendus in ea possimus earum quo voluptatibus et, exercitationem eius fugit dolor ipsa eaque? Voluptas, dicta.
+          {{ service.secondary_text }}
         </p>
       </div>
     </div>
-    <img src="{% static 'img/maven.webp' %}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
+    <img src="{{ service.image.url }}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
   </div>
   <div data-aos-delay="50"
   data-aos-duration="1000" data-aos="fade-in" class="md:w-1/3 block md:flex flex-col justify-between p-3">
@@ -82,6 +82,171 @@
       </svg>
     </span>
     </a>
+  </div>
+</section>
+<section class="bg-off-black relative bg-fixed center-bg-img dark-overlay" style="background-image:url({{ service.background_image.url }})">
+  <div class="top-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+    <div class="border-corner border-right-0 border-bottom-0"></div>
+    <div class="border-corner border-left-0 border-bottom-0"></div>
+  </div>
+
+  <div class="bottom-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+    <div class="border-corner border-top-0 border-right-0"></div>
+    <div class="border-corner border-top-0 border-left-0"></div>
+  </div>
+
+  <div class="min-h-screen container mx-auto flex max-md:flex-col md:flex-row justify-between items-stretch py-[5rem] md:py-[10rem] relative z-10 p-3">
+    <div class="flex flex-col justify-between basis-1/2">
+      <div data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000">
+        <h2 class="inter text-white text-4xl md:text-5xl lg:text-7xl font-semibold">{{ service.details_title }}</h2>
+        <p class="inter text-white py-3 md:py-[3rem] text-2xl md:text-3xl lg:max-w-[50%] opacity-[0.6]">{{ service.details_description }}</p>
+      </div>
+      <div class="p-3">
+        <a data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" href="{% url 'portfolio' %}" class="font-semibold inter text-xl link-primary white relative mt-5 text-white pr-[50px] max-md:mb-5">
+          Check out my work
+          <span class="inline-block absolute">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 256 256"
+            style="user-select: none; width: 30px; height: 30px; display: block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"
+            focusable="false"
+            class="inline ml-3"
+            color="rgb(255, 255, 255)">
+            <g color="rgb(255, 255, 255)" weight="regular"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></g>
+          </svg>
+        </span>
+        </a>
+      </div>
+    </div>
+    <div class="basis-1/2 flex max-md:flex-col md:flex-row flex-wrap">
+
+      <div class="basis-1/2 flex flex-col bb-white p-5 max-md:hidden">
+      </div>
+      <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_one_image.url }} alt={{ service.details_one_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">01</p>
+          </div>
+        </div>
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">{{ service.details_one_title }}</h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">{{ service.details_one_description }}</p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 max-md:hidden">
+      </div>
+
+      <div data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_two_image.url }} alt={{ service.details_two_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">02</p>
+          </div>
+        </div>
+        <div class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">{{ service.details_two_title }}</h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">{{ service.details_two_description }}</p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_three_image.url }} alt={{ service.details_three_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div data-aos="fade-in" data-aos-delay="50"
+          data-aos-duration="1000" class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">03</p>
+          </div>
+        </div>
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">{{ service.details_three_title }}</h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">{{ service.details_three_description }}</p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_four_image.url }} alt={{ service.details_four_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">04</p>
+          </div>
+        </div>
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">{{ service.details_four_title }}</h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">
+            {{ service.details_four_description }}
+          </p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_five_image.url }} alt={{ service.details_five_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">05</p>
+          </div>
+        </div>
+        <div data-aos="fade-in" data-aos-delay="50"
+        data-aos-duration="1000" class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">{{ service.details_five_title }}</h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">
+            {{ service.details_five_description }}
+          </p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
+      </div>
+
+      <div data-aos="fade-in" data-aos-delay="50"
+      data-aos-duration="1000" class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
+        <div class="flex flex-row justify-between">
+          <div clas="basis-1/2">
+            <img src={{ service.details_six_image.url }} alt={{ service.details_six_title }} class="max-w-[60px] rounded-md" />
+          </div>
+          <div class="basis-1/2 justify-end flex">
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">06</p>
+          </div>
+        </div>
+        <div class="pt-2">
+          <h3 class="text-white font-semibold text-2xl inter">
+            {{ service.details_six_title }}
+          </h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">
+            {{ service.details_six_description }}
+          </p>
+        </div>
+      </div>
+
+      <div class="basis-1/2 flex flex-col p-5 max-md:hidden">
+      </div>
+      <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
+      </div>
+
+    </div>
   </div>
 </section>
 {% endblock %}

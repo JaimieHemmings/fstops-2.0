@@ -8,7 +8,7 @@
       <div class=" basis-1/2 max-lg:py-[5rem] p-3 align-baseline max-md:pt-5 flex flex-row justify-between">
         <div class="min-w-[40px]">
           <img data-aos-delay="50"
-          data-aos-duration="1000" data-aos="fade-in" src="{% static 'img/review-img.png' %}" alt="Quotation mark" class="max-w-full rounded-full h-auto" />
+          data-aos-duration="1000" data-aos="fade-in" src="{{ reviews.0.img.url }}" alt="Quotation mark" class="w-12 rounded-full h-auto object-fit" />
         </div>
         <div data-aos-delay="50"
         data-aos-duration="1000" data-aos="fade-in" class="px-3">
@@ -26,8 +26,8 @@
                 C22.602,0.567,25.338,0.567,26.285,2.486z"/></svg>
               </p>
               <p data-aos-delay="50"
-              data-aos-duration="1000" data-aos="fade-in" class="pb-3 text-base opacity-[0.6] inter">Working with Ben was Seamless. He was professional, friendly, and made me feel comfortable in front of the camera.</p>
-              <p class="font-base inter text-sm">Sarah &amp; John, Newlyweds</p>
+              data-aos-duration="1000" data-aos="fade-in" class="pb-3 text-base opacity-[0.6] inter">{{reviews.0.review}}</p>
+              <p class="font-base inter text-sm">{{reviews.0.name}}</p>
             </div>
       </div>
     </div>
