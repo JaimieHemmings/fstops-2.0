@@ -1,22 +1,20 @@
 {% load static %}
 <header>
-  <div class="wrapper relative w-full h-screen overflow-hidden dark-overlay grid-overlay"> 
-    {% include 'home/partials/video.html' %} 
+  <div class="wrapper relative w-full overflow-hidden dark-overlay grid-overlay"> 
+    <iframe style="width:100%;aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/89l6ZuW_QDc?autoplay=1&loop=1&mute=1&controls=0&playlist=89l6ZuW_QDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; modestbranding; playsinline" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <div class="content relative z-10 text-center h-full flex flex-col justify-end">
-      <div class="circle absolute z-10 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
+    <div class="content absolute z-20 w-full top-0 left-0 text-center h-full flex flex-col justify-end">
+      <div class="circle absolute z-20 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
       </div>
 
-      <h1 data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
+      <h1 class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
         {% if title %}
           {{ title }}
         {% else %}
           ART IN FOCUS
         {% endif %}
       </h1>
-      <p data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="text-5xl md:text-8xl text-white mb-[5rem] md:mb-[10rem] leading-[0.8] font-bold mt-1">
+      <p class="text-5xl md:text-8xl text-white mb-[5rem] leading-[0.8] font-bold mt-1">
         {% if subtitle %}
           {{ subtitle }}
         {% else %}
