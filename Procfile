@@ -1,1 +1,1 @@
-web: gunicorn fstop.wsgi:application
+web: gunicorn fstops.wsgi:application
