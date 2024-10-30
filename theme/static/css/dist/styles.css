@@ -1349,13 +1349,13 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#\] {
-  background-color: #;
 }
 
 .bg-fixed {
@@ -1736,6 +1736,11 @@ select {
     display: none;
   }
 
+  .max-lg\:bg-\[\#111112\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 18 / var(--tw-bg-opacity));
+  }
+
   .max-lg\:py-\[5rem\] {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1783,11 +1788,6 @@ select {
     justify-content: center;
   }
 
-  .max-md\:bg-\[\#111112\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 17 18 / var(--tw-bg-opacity));
-  }
-
   .max-md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -1806,16 +1806,6 @@ select {
   .max-md\:py-\[4rem\] {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-
-  .max-md\:py-\[3rem\] {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .max-md\:py-\[5rem\] {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 
   .max-md\:pb-3 {
@@ -1842,11 +1832,6 @@ select {
   .max-md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .max-md\:text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }
 
@@ -1875,12 +1860,12 @@ select {
     position: sticky;
   }
 
-  .md\:ml-\[50\%\] {
-    margin-left: 50%;
-  }
-
   .md\:mb-\[5rem\] {
     margin-bottom: 5rem;
+  }
+
+  .md\:ml-\[50\%\] {
+    margin-left: 50%;
   }
 
   .md\:flex {
@@ -1889,10 +1874,6 @@ select {
 
   .md\:grid {
     display: grid;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:h-\[60vh\] {
@@ -2026,14 +2007,13 @@ select {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .md\:text-black {
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -2053,6 +2033,11 @@ select {
   .lg\:rounded-l-\[calc\(2rem\+1px\)\] {
     border-top-left-radius: calc(2rem + 1px);
     border-bottom-left-radius: calc(2rem + 1px);
+  }
+
+  .lg\:bg-\[\#111112\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 18 / var(--tw-bg-opacity));
   }
 
   .lg\:text-2xl {
