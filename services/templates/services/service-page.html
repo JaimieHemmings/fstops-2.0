@@ -36,6 +36,9 @@
         <p class="inter opacity-[0.6] text-base font-semibold">
           {{ service.secondary_text }}
         </p>
+        {% if accreditation_img %}
+        <img src="{{ accreditation_img }}" alt="Accreditation logo" class="max-w-full m-auto" />
+        {% endif %}
       </div>
     </div>
     <img src="{{ service.image.url }}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
