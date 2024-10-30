@@ -2035,11 +2035,6 @@ select {
     border-bottom-left-radius: calc(2rem + 1px);
   }
 
-  .lg\:bg-\[\#111112\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 17 18 / var(--tw-bg-opacity));
-  }
-
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
