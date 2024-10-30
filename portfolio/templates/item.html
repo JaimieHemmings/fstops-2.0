@@ -40,10 +40,18 @@
     <img src="{{item.img_four.url}}" loading="lazy" alt="{{item.img_four_alt}}" class="w-full h-auto object-fit" />
     <img src="{{item.img_five.url}}" loading="lazy" alt="{{item.img_five_alt}}" class="w-full h-auto object-fit" />
     <img src="{{item.img_six.url}}" loading="lazy" alt="{{item.img_six_alt}}" class="w-full h-auto object-fit" />
+    {% if item.img_seven %}
     <img src="{{item.img_seven.url}}" loading="lazy" alt="{{item.img_seven_alt}}" class="w-full h-auto object-fit" />
+    {% endif %}
+    {% if item.img_eight %}
     <img src="{{item.img_eight.url}}" loading="lazy" alt="{{item.img_eight_alt}}" class="w-full h-auto object-fit" />
+    {% endif %}
+    {% if item.img_nine %}
     <img src="{{item.img_nine.url}}" loading="lazy" alt="{{item.img_nine_alt}}" class="w-full h-auto object-fit" />
+    {% endif %}
+    {% if item.img_ten %}
     <img src="{{item.img_ten.url}}" loading="lazy" alt="{{item.img_ten_alt}}" class="w-full h-auto object-fit" />
+    {% endif %}
   </div>
 </section>
 {% endblock %}

@@ -58,10 +58,10 @@ class Portfolio(models.Model):
     img_four = models.ImageField(upload_to=get_path)
     img_five = models.ImageField(upload_to=get_path)
     img_six = models.ImageField(upload_to=get_path)
-    img_seven = models.ImageField(upload_to=get_path)
-    img_eight = models.ImageField(upload_to=get_path)
-    img_nine = models.ImageField(upload_to=get_path)
-    img_ten = models.ImageField(upload_to=get_path)
+    img_seven = models.ImageField(upload_to=get_path, null=True, blank=True)
+    img_eight = models.ImageField(upload_to=get_path, null=True, blank=True)
+    img_nine = models.ImageField(upload_to=get_path, null=True, blank=True)
+    img_ten = models.ImageField(upload_to=get_path, null=True, blank=True)
 
     def __str__(self):
         return self.title
