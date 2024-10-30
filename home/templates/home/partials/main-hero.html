@@ -1,13 +1,13 @@
 {% load static %}
 <header>
-  <div class="wrapper relative w-full overflow-hidden md:dark-overlay grid-overlay"> 
-    <video width="100%" height="auto" class="max-h-[90vh] bg-[#111112]" preload="none" autoplay playsinline loop muted>
+  <div class="wrapper relative h-[80vh] w-full overflow-hidden md:dark-overlay"> 
+    <video class="h-full w-full object-cover bg-[#111112]" preload="none" autoplay playsinline loop muted>
       <source src="{% static 'home/videos/banner-video.mp4' %}" type="video/mp4">
       Your browser does not support the video tag.
     </video> 
 
-    <div class="content bg-transparent max-lg:bg-[#111112] lg:absolute z-20 w-full top-0 left-0 text-center h-full flex flex-col justify-end py-5">
-      <div class="max-lg:hidden circle absolute z-20 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
+    <div class="content bg-transparent absolute z-20 w-full top-0 left-0 text-center h-full flex flex-col justify-end py-5">
+      <div class="circle absolute z-20 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
       </div>
 
       <h1 class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
@@ -17,7 +17,7 @@
           ART IN FOCUS
         {% endif %}
       </h1>
-      <p class="text-5xl md:text-8xl text-white md:mb-[5rem] leading-[0.8] font-bold mt-1">
+      <p class="text-5xl md:text-8xl text-white mb-[3rem] leading-[0.8] font-bold mt-1">
         {% if subtitle %}
           {{ subtitle }}
         {% else %}
