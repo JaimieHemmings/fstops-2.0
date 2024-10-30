@@ -46,7 +46,7 @@
   <div class="basis-2/4 px-3 border-l-grey border-r-grey py-5 md:py-[10rem] ">
     <p class="inter font-semibold text-3xl pb-[3rem]">{{ article.intro }}</p>
     <p class="inter font-semibold text-xl opacity-[0.6]">{{ article.lead_paragraph }}</p>
-    <img class="py-[3rem]" src="{{ article.body_img.url }}" alt="{{ article.title }}">
+    <img class="py-[3rem]" loading="lazy" src="{{ article.body_img.url }}" alt="{{ article.title }}">
     <div class="article-body">
       {{article.body|safe}}
     </div>
