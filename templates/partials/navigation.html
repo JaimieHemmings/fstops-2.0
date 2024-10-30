@@ -51,11 +51,10 @@
 </section>
 <nav id="nav-overlay" class="absolute nav-container w-full min-h-screen md:h-[60vh] top-0 z-40 bg-off-black">
   <div class="container mx-auto h-full flex justify-between align-items-center">
-    <div class="hidden md:flex flex-col justify-around p-3">
-      <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-hawk.jpg' %}" alt="A girl posing with a predatory hawk">
+    <div class="hidden md:flex flex-col justify-around p-3 basis-1/2">
       <h2 class="text-white text-5xl font-bold uppercase pb-0 p-5">FStops<br>Photography</h2>
     </div>
-    <div class="h-full flex flex-col justify-center max-md:min-h-screen max-md:w-full">
+    <div class="h-full md:basis-1/2 flex flex-col justify-center max-md:min-h-screen max-md:w-full">
       <ul class="align-items-center h-full w-full flex flex-col justify-center text-white">
         <li class="font-semibold p-3">
           <a class="text-xl max-md:block text-center inter" href="{% url 'home' %}">Home</a>
@@ -76,9 +75,6 @@
           <a class="text-xl max-md:block text-center inter" href="{% url 'contact' %}">Contact</a>
         </li>
       </ul>
-    </div>
-    <div class="hidden md:flex flex-col justify-end pb-5">
-      <img class="max-w-full h-auto w-[200px] m-auto" src="{% static 'img/girl-with-telescope.jpg' %}" alt="A woman holding a telescope">
     </div>
   </div>
 </nav>
