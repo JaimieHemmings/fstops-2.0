@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+import datetime
 import uuid
 import string  # for string constants
 import random  # for generating random strings
@@ -50,7 +51,7 @@ class Portfolio(models.Model):
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     thumbnail = models.ImageField(upload_to=get_path)
     slug = models.SlugField(null=True, blank=True, unique=True, editable=False)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(("Date"), default=datetime.date.today)
     body = RichTextField()
     img_one = models.ImageField(upload_to=get_path)
     img_two = models.ImageField(upload_to=get_path)
