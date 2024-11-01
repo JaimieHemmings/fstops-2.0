@@ -35,7 +35,7 @@ class Service(models.Model):
     details_six_description = models.CharField(max_length=100, null=False, blank=False)
     details_six_image = models.ImageField(upload_to=get_path, null=False, blank=False)
     cta_img = models.ImageField(upload_to=get_path, default='default.jpg')
-    accreditation_img = models.ImageField(upload_to=get_path, default='default.jpg', null=True, blank=True)
+    accreditation_img = models.ImageField(upload_to=get_path, null=True, blank=True)
 
     def __str__(self):
         return self.name

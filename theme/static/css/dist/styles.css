@@ -943,23 +943,19 @@ select {
   grid-row-start: 5;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.my-\[3rem\] {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-\[3rem\] {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .-mt-\[4px\] {
@@ -1517,20 +1513,12 @@ select {
   padding-right: 1.25rem;
 }
 
-.pr-\[22rem\] {
-  padding-right: 22rem;
-}
-
 .pr-\[50px\] {
   padding-right: 50px;
 }
 
 .pr-\[5rem\] {
   padding-right: 5rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
 }
 
 .pt-10 {
@@ -1567,10 +1555,6 @@ select {
 
 .pt-\[6rem\] {
   padding-top: 6rem;
-}
-
-.pt-\[1rem\] {
-  padding-top: 1rem;
 }
 
 .text-center {
@@ -1819,19 +1803,14 @@ select {
     padding-bottom: 2.5rem;
   }
 
-  .max-md\:py-\[2rem\] {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .max-md\:py-\[4rem\] {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
   .max-md\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .max-md\:py-\[2rem\] {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .max-md\:pb-3 {
@@ -1848,16 +1827,6 @@ select {
 
   .max-md\:text-center {
     text-align: center;
-  }
-
-  .max-md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .max-md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1987,10 +1956,6 @@ select {
 
   .md\:pt-\[3rem\] {
     padding-top: 3rem;
-  }
-
-  .md\:indent-\[38rem\] {
-    text-indent: 38rem;
   }
 
   .md\:text-2xl {

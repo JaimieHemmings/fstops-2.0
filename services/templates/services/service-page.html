@@ -17,18 +17,19 @@
         <p class="inter opacity-[0.6] text-base font-semibold">
           {{ service.secondary_text }}
         </p>
-        {% if service.accreditation_img.url %}
-        <img src="{{ service.accreditation_img.url }}" alt="Accreditation logo" class="max-w-full mx-auto my-5" />
-        {% endif %}
       </div>
     </div>
     <img src="{{ service.image.url }}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
   </div>
   <div data-aos-delay="50"
   data-aos-duration="1000" data-aos="fade-in" class="md:w-1/3 block md:flex flex-col justify-between p-3">
+  <div>
+    {% if service.accreditation_img.url %}
+    <img src="{{ service.accreditation_img.url }}" alt="Accreditation logo" class="max-w-full mx-auto my-5" />
+    {% endif %}
     <div class="rounded-lg bg-white p-5 mb-5">
       <img data-aos-delay="50"
-      data-aos-duration="1000" data-aos="fade-in" src="{{ service.cta_img.url }}" alt="A mans silhouette exposed against the colourful evening sky" class="max-w-full rounded-lg mb-5" />
+      data-aos-duration="1000" data-aos="fade-in" src="{{ service.cta_img.url }}" alt="A mans silhouette exposed against the colourful evening sky" class="max-w-full mx-auto rounded-lg mb-5" />
       <h2 class="text-xl inter font-semibold pb-3">
         Ready to capture your moments?
       </h2>
@@ -56,6 +57,8 @@
         </div>
       </div>
     </div>
+    
+  </div>
     <a data-aos-delay="50"
     data-aos-duration="1000" data-aos="fade-in" href="{% url 'portfolio' %}" class="font-semibold inter text-xl link-primary relative mt-5">
       Check out my work
