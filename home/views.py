@@ -2,6 +2,8 @@ from django.shortcuts import render
 from blog.models import Article
 from portfolio.models import Portfolio
 from .models import Review, FAQ
+from django.shortcuts import get_object_or_404
+from .models import AboutPage
 
 def index(request):
   """
@@ -24,5 +26,9 @@ def about(request):
   """
   A view that will render the index.html template
   """
-  context={}
+  # get the latest AboutPage object
+  content = get_object_or_404(AboutPage.objects.all()[:1])
+  context={
+    'content': content
+  }
   return render(request, 'about/about.html', context)

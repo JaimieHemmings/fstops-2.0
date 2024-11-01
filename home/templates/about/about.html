@@ -38,30 +38,48 @@
   <div class="basis-3/4">
 
     <h1 class="inter font-bold text-7xl pb-[3rem]">About</h1>
-    <p class="inter text-3xl inter font-semibold pb-[3rem]">Hi, I'm Ben Hollington, the proud owner of FStops Photography. A photography studio based in the heart of Cornwall, Great Britain. I provide a variety of photography services and enjoy capturing all sorts of stories.</p>
+    <p class="inter text-3xl inter font-semibold pb-[3rem]">
+      {{content.intro}}
+    </p>
 
     <div class="flex flex-col md:flex-row pb-[3rem] gap-8">
-      <p class="inter text-2xl font-semibold basis-1/3">My goal is simple</p>
+      <p class="inter text-2xl font-semibold basis-1/3">
+        {{ content.subtitle_one }}
+      </p>
       
-      <p class="basis-2/3 inter opacity-[0.6] text-xl font-semibold">I capture real moments that feel like you. I want you to feel comfortable and just be yourself infront of the camera, whther it's on your wedding day, during a family session, or while working on a creative project together.</p>
+      <p class="basis-2/3 inter opacity-[0.6] text-xl font-semibold">
+        {{ content.text_one }}
+      </p>
     </div>
 
-    <p class="inter text-xl inter font-semibold pb-[3rem]">Photography has been my passion for as long as I can remember. Growing up surrounded by Cornwall's rugged coastlines and stunning countryside, I’ve always been drawn to the way light and landscape work together, shaping how we see and experience the world.</p>
+    <p class="inter text-xl inter font-semibold pb-[3rem]">
+      {{ content.body_one }}
+    </p>
 
-    <p class="inter text-xl inter font-semibold pb-[3rem]">For over 15 years, I’ve been behind the camera, honing my craft and developing a deep appreciation for capturing life’s authentic, unscripted moments.</p>
+    <p class="inter text-xl inter font-semibold pb-[3rem]">
+      {{ content.body_two }}
+    </p>
 
-    <img src="{% static 'img/selfie.jpg' %}" alt="A self portrait against the colourful sunset" class="max-w-full h-auto mx-auto my-[3rem] rounded-lg" />
+    <img src={{ content.body_image.url }} alt="A self portrait against the colourful sunset" class="max-w-full h-auto mx-auto my-[3rem] rounded-lg" />
 
-    <p class="inter text-xl inter font-semibold pb-[3rem]">Whether it’s documenting a special event, showcasing the character of a home or business, or simply capturing the natural beauty of a landscape, my aim is to tell stories through images that feel real and meaningful.</p>
+    <p class="inter text-xl inter font-semibold pb-[3rem]">
+      {{ content.body_three }}
+    </p>
 
     
     <div class="flex flex-col md:flex-row pb-[3rem] gap-8 align-middle">
-      <p class="inter text-2xl font-semibold basis-1/3">I focus on the details that often go unnoticed</p>
+      <p class="inter text-2xl font-semibold basis-1/3">
+        {{ content.subtitle_two }}
+      </p>
       
-      <p class="basis-2/3 inter opacity-[0.6] text-xl font-semibold">and I love the challenge of making each photograph unique to the moment or space it’s portraying. Along with Cornwall, I’ve also spent time living in the French Alps, which gave me the chance to explore new, dramatic landscapes and deepen my love for capturing nature in all its forms.</p>
+      <p class="basis-2/3 inter opacity-[0.6] text-xl font-semibold">
+        {{ content.text_two }}
+      </p>
     </div>
 
-    <p class="inter text-xl inter font-semibold pb-[3rem]">Based on Bodmin Moor, I draw constant inspiration from the natural world around me. I’m always looking for new ways to tell stories through my photography, and I’m excited to see where my camera will take me next.</p>
+    <p class="inter text-xl inter font-semibold pb-[3rem]">
+      {{ content.body_four }}
+    </p>
     
   </div>
 </section>
