@@ -10,13 +10,11 @@
 <section class="block md:flex flex-row container mx-auto md:gap-20 md:py-[3rem]">
   <div class="block md:flex gap-4 flex-col justify-between md:w-2/3">
     <div class="block lg:flex flex-row justify-between gap-4 md:gap-16 pb-5 p-3">
-      <p class="opacity-[0.6] font-medium inter text-xl basis-1/2">
-        {{ service.description }}
-      </p>
-      <div class=" basis-1/2 max-lg:py-[5rem] align-baseline max-md:pt-5 flex flex-col pb-5 justify-between">
-        <p class="inter opacity-[0.6] text-base font-semibold">
-          {{ service.secondary_text }}
-        </p>
+      <div class="font-medium inter text-xl basis-1/2 article-body">
+        {{ service.description|linebreaks }}
+      </div>
+      <div class=" basis-1/2 max-lg:py-[5rem] align-baseline max-md:pt-5 flex flex-col pb-5 justify-between article-body">
+        {{ service.secondary_text|linebreaks }}
       </div>
     </div>
     <img src="{{ service.image.url }}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
