@@ -4,6 +4,7 @@ from portfolio.models import Portfolio
 from .models import Review, FAQ
 from django.shortcuts import get_object_or_404
 from .models import AboutPage
+from services.models import Service
 
 def index(request):
   """
@@ -13,11 +14,13 @@ def index(request):
   articles = Article.objects.all().order_by('-date')[:2]
   portfolio_items = Portfolio.objects.all().order_by('-date')[:4]
   reviews = Review.objects.all()
+  services = Service.objects.all()
   context={
     'faq': faq,
     'articles': articles,
     'portfolio_items': portfolio_items,
-    'reviews': reviews
+    'reviews': reviews,
+    'services': services
   }
   return render(request, 'home/index.html', context)
 

@@ -196,3 +196,24 @@ p {
     margin-bottom: 15px;
   }
 }
+
+/*
+  Services Page Styles
+*/
+
+@media screen and (min-width: 768px) {
+  .service-img:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    backdrop-filter: saturate(0%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .service-img:hover:after {
+    backdrop-filter: saturate(100%);
+  }
+}

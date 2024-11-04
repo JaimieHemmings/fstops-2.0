@@ -34,86 +34,44 @@
         </a>
       </div>
     </div>
-    <div class="basis-1/2 flex max-md:flex-col md:flex-row flex-wrap">
+    <div class="basis-1/2 flex flex-row flex-wrap">
 
       <div class="basis-1/2 flex flex-col bb-white p-5 max-md:hidden">
       </div>
       <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
       </div>
 
-      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="flex flex-row justify-between">
-          <div clas="basis-1/2">
-            <img src="{% static 'img/example.avif' %}" loading="lazy" alt="Professional Headshots" class="max-w-[60px] rounded-md" />
-          </div>
-          <div class="basis-1/2 justify-end flex">
-            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">01</p>
-          </div>
-        </div>
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="pt-2">
-          <h3 class="text-white font-semibold text-2xl inter">Event</h3>
-          <p class="text-white opacity-[0.6] inter pt-2 text-base">Stand out with a polished professional look.</p>
-        </div>
-      </div>
-
-      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 max-md:hidden">
-      </div>
-
-      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="flex flex-row justify-between">
-          <div clas="basis-1/2">
-            <img src="{% static 'img/example.avif' %}" loading="lazy" alt="Professional Headshots" class="max-w-[60px] rounded-md" />
-          </div>
-          <div data-aos="fade-in" data-aos-delay="50"
-          data-aos-duration="1000" class="basis-1/2 justify-end flex">
-            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">02</p>
-          </div>
-        </div>
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="pt-2">
-          <h3 class="text-white font-semibold text-2xl inter">Lifestyle</h3>
-          <p class="text-white opacity-[0.6] inter pt-2 text-base">Stand out with a polished professional look.</p>
-        </div>
-      </div>
-
-      <div class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="flex flex-row justify-between">
-          <div clas="basis-1/2">
-            <img src="{% static 'img/example.avif' %}" loading="lazy" alt="Professional Headshots" class="max-w-[60px] rounded-md" />
-          </div>
-          <div class="basis-1/2 justify-end flex">
-            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">03</p>
-          </div>
-        </div>
-        <div data-aos="fade-in" data-aos-delay="50"
-        data-aos-duration="1000" class="pt-2">
-          <h3 class="text-white font-semibold text-2xl inter">Property</h3>
-          <p class="text-white opacity-[0.6] inter pt-2 text-base">Stand out with a polished professional look.</p>
-        </div>
-      </div>
-
-      <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
-      </div>
-
+    {% for service in services %}
       <div data-aos="fade-in" data-aos-delay="50"
       data-aos-duration="1000" class="basis-1/2 flex flex-col bl-white bb-white p-5 justify-around">
         <div class="flex flex-row justify-between">
           <div clas="basis-1/2">
-            <img src="{% static 'img/example.avif' %}" loading="lazy" alt="Professional Headshots" class="max-w-[60px] rounded-md" />
+            <img src="{{ service.homepage_img.url }}" loading="lazy" alt="Professional Headshots" class="max-w-[60px] rounded-md" />
           </div>
           <div class="basis-1/2 justify-end flex">
-            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">04</p>
+            <p class="text-white inter opacity-[0.6] text-xl font-2xl font-semibold">
+              0{{forloop.counter}}
+            </p>
           </div>
         </div>
         <div class="pt-2">
-          <h3 class="text-white font-semibold text-2xl inter">Aerial</h3>
-          <p class="text-white opacity-[0.6] inter pt-2 text-base">Stand out with a polished professional look.</p>
+          <h3 class="text-white font-semibold text-2xl inter">
+            {{ service.name }}
+          </h3>
+          <p class="text-white opacity-[0.6] inter pt-2 text-base">
+            {{ service.homepage_description }}
+          </p>
         </div>
       </div>
+      {% if forloop.counter == 1 %}
+        <div class="basis-1/2 flex flex-col bl-white bb-white p-5 max-md:hidden">
+        </div>
+      {% endif %}
+      {% if forloop.counter == 3 %}
+        <div class="basis-1/2 flex flex-col bl-white p-5 max-md:hidden">
+        </div>
+      {% endif %}
+    {% endfor %}
 
       <div class="basis-1/2 flex flex-col p-5 max-md:hidden">
       </div>

@@ -1170,6 +1170,10 @@ select {
   max-width: 1280px;
 }
 
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
