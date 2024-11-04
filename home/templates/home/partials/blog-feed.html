@@ -37,7 +37,7 @@
     <div class="basis-2/3 p-3 flex flex-col lg:flex-row justify-between gap-8">
       {% for article in articles %}
       <a data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" href="#" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg relative" style="background-image:url({{ article.thumbnail.url }})">
+      data-aos-duration="1000" href="{% url 'article' article.slug %}" class="overflow-hidden center-bg-img flex flex-col justify-between basis-1/2 p-3 dark-overlay rounded-lg relative" style="background-image:url({{ article.thumbnail.url }})">
         <div class="flex flex-row justify-between w-full relative z-20 pb-[3rem] md:pb-[20rem]">
           <p class="inter text-base font-semibold text-white">{{article.date|date:"M d, Y"}}</p>
           <svg xmlns="http://www.w3.org/2000/svg"
