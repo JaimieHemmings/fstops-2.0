@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<header class="p-3 py-[20rem] bg-fixed dark-overlay relative center-bg-img" style="background-image:url({{article.thumbnail.url}})">
+<header class="p-3 py-[3rem] md:py-[20rem] bg-fixed dark-overlay relative center-bg-img" style="background-image:url({{article.thumbnail.url}})">
   <div class="container mx-auto relative z-[20] flex flex-col md:flex-row">
     <div class="basis-1/4">
       <p class="inter opacity-[0.6] font-semibold text-white text-2xl">{{ article.date|date:"M d, Y"}}</p>
