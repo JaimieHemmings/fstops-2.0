@@ -13,7 +13,9 @@
   {% include 'home/partials/quote-large.html' with quote="I don't just take photos; I capture the raw emotions, the subtle moments, and the unique narratives that make every project so different" %}
   {% include 'home/partials/bento-box.html' %}
   {% include 'home/partials/offer.html' %}
-  {% include 'home/partials/assertions.html' %}
+  {% if mosaicobjects %}
+    {% include 'home/partials/assertions.html' %}
+  {% endif %}
   {% if portfolio_items %}
     {% include 'home/partials/portfolio-feed.html' %}
   {% endif %}

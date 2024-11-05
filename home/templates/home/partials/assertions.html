@@ -41,10 +41,10 @@
     <div class="md:grid md:grid-cols-3 md:grid-rows-4 gap-4 mt-4">
       <!-- Column 1 -->
       <div data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="center-bg-img col-start-1 row-start-1 row-span-3 rounded-lg overflow-hidden relative max-md:min-h-[300px] max-md:mb-4" style="background-image: url({% static 'home/img/street-shot.avif' %});">
+      data-aos-duration="1000" class="center-bg-img col-start-1 row-start-1 row-span-3 rounded-lg overflow-hidden relative max-md:min-h-[300px] max-md:mb-4" style="background-image: url({{ mosaicobjects.0.img.url }});">
         <div class="absolute bottom-0 left-0 w-full p-10">
-          <a href="/" class="font-bold text-white white inter text-2xl link-primary relative mt-5" target="_blank">
-            Check my Instagram
+          <a href="{{mosaicobjects.0.link}}" class="font-bold text-white white inter text-2xl link-primary relative mt-5" target="_blank">
+            {{mosaicobjects.0.link_text}}
             <span class="inline-block absolute">
               <svg xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
@@ -61,8 +61,8 @@
       <div data-aos="fade-in" data-aos-delay="50"
       data-aos-duration="1000" class="col-start-1 row-start-4 row-span-1 p-5 rounded-lg bg-white flex flex-row justify-between max-md:mb-4">
         <div>
-          <h3 class="inter font-bold text-5xl pt-10">100<span>+</span></h3>
-          <p class="inter font-semibold text-xl pt-3 opacity-[0.6]">Satisfied Clients</p>
+          <h3 class="inter font-bold text-5xl pt-10">{{ mosaicobjects.1.bigNum }}<span>{{ mosaicobjects.1.symbol }}</span></h3>
+          <p class="inter font-semibold text-xl pt-3 opacity-[0.6]">{{ mosaicobjects.1.text }}</p>
         </div>
         <div class="flex flex-col justify-center align-middle">
           <img src="{% static 'home/img/client-portraits.png' %}" alt="Previous clients" class="w-max-full h-auto" />
@@ -71,13 +71,13 @@
     
       <!-- Column 2 -->
       <div data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="col-start-2 row-start-1 row-span-2 overflow-hidden rounded-lg relative bg-dark-gradient center-bg-img max-md:min-h-[300px] max-md:mb-4" style="background-image: url({% static 'home/img/woman-in-tall-grass.jpg' %});">
+      data-aos-duration="1000" class="col-start-2 row-start-1 row-span-2 overflow-hidden rounded-lg relative bg-dark-gradient center-bg-img max-md:min-h-[300px] max-md:mb-4" style="background-image: url({{ mosaicobjects.2.img.url }});">
         <div class="absolute bottom-0 w-full left-0 p-5 z-20">
-          <h3 class="text-white inter text-2xl font-semibold text-center">Enjoy high-resolution photos that capture every detail and emotion beautifully</h3>
+          <h3 class="text-white inter text-2xl font-semibold text-center">{{ mosaicobjects.2.text }}</h3>
         </div>
       </div>
       <div data-aos="fade-in" data-aos-delay="50"
-      data-aos-duration="1000" class="col-start-2 row-start-3 center-bg-img row-span-2 rounded-lg overflow-hidden max-md:min-h-[300px] max-md:mb-4" style="background-image: url({% static 'home/img/equipment.webp' %});">
+      data-aos-duration="1000" class="col-start-2 row-start-3 center-bg-img row-span-2 rounded-lg overflow-hidden max-md:min-h-[300px] max-md:mb-4" style="background-image: url({{ mosaicobjects.3.img.url }});">
       </div>
     
       <!-- Column 3 -->
@@ -85,21 +85,25 @@
       data-aos-duration="1000" class="col-start-3 row-start-1 row-span-1 max-md:mb-4">
         <div class="flex flex-row justify-between w-full h-full gap-4">
           <div class="bg-[#e7e7e7] rounded-lg p-5 basis-1/2 py-5">
-            <h2 class="inter font-semibold text-5xl pt-5 pb-3">65<span class="text-xl align-top">%</span></h2>
-            <p class="inter font-semibold text-md opacity-[0.6] max-w-[90%]">Clients book another session within a year</p>
+            <h2 class="inter font-semibold text-5xl pt-5 pb-3">{{ mosaicobjects.4.bigNum }}<span class="text-xl align-top">{{ mosaicobjects.4.symbol }}</span></h2>
+            <p class="inter font-semibold text-md opacity-[0.6] max-w-[90%]">
+              {{ mosaicobjects.4.text }}
+            </p>
           </div>
-          <div class="bg-[#e7e7e7] rounded-lg p-5 basis-1/2 text-center center-bg-img bg-dark-gradient relative overflow-hidden" style="background-image:url({% static 'home/img/more-equipment.webp' %})">
-            <h2 class="inter font-bold text-white text-base py-10 z-20 relative opacity-[0.8]">Taken with precision</h2>
+          <div class="bg-[#e7e7e7] rounded-lg p-5 basis-1/2 text-center center-bg-img bg-dark-gradient relative overflow-hidden" style="background-image:url({{ mosaicobjects.5.img.url }})">
+            <h2 class="inter font-bold text-white text-base py-10 z-20 relative opacity-[0.8]">{{ mosaicobjects.5.text }}</h2>
           </div>
         </div>
       </div>
       <div data-aos="fade-in" data-aos-delay="50"
       data-aos-duration="1000" class="col-start-3 max-md:mb-4 row-start-2 row-span-2 rounded-lg overflow-hidden bg-white">
-        <img src="{% static 'home/img/texts.jpg' %}" alt="Text conversation offering encouragement to a model" class="max-w-full h-auto mx-auto">
+        <img src="{{ mosaicobjects.6.img.url }}" alt="Text conversation offering encouragement to a model" class="max-w-full h-auto mx-auto">
       </div>
-      <div class="col-start-3 row-start-4 row-span-1 flex justify-center flex-col p-5 rounded-lg bg-dark-gradient center-bg-img relative overflow-hidden max-md:py-10" style="background-image:url({% static 'home/img/woman-pose.avif' %})">
-        <h2 class="pb-3 font-bold text-3xl text-white inter relative z-20">Turnaround Time</h2>
-        <p class="opacity-[0.6] font-semibold inter text-base text-white relative z-20">Edited Photos are typically delivered within around 14 days, but can vary depending on specific requirements.</p>
+      <div class="col-start-3 row-start-4 row-span-1 flex justify-center flex-col p-5 rounded-lg bg-dark-gradient center-bg-img relative overflow-hidden max-md:py-10" style="background-image:url({{ mosaicobjects.7.img.url }})">
+        <h2 class="pb-3 font-bold text-3xl text-white inter relative z-20">{{ mosaicobjects.7.title }}</h2>
+        <p class="opacity-[0.6] font-semibold inter text-base text-white relative z-20">
+          {{ mosaicobjects.7.text }}
+        </p>
       </div>
     </div>
   </div>

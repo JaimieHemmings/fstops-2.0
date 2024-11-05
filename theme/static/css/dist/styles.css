@@ -1799,11 +1799,6 @@ select {
     padding-bottom: 2.5rem;
   }
 
-  .max-md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .max-md\:py-\[2rem\] {
     padding-top: 2rem;
     padding-bottom: 2rem;

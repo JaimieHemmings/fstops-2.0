@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     # ckeditor
     'ckeditor',
 
+    # colorfield
+    'colorfield',
+
     # Custom Apps
     "home",
     "contact",

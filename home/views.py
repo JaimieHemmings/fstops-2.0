@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from blog.models import Article
 from portfolio.models import Portfolio
-from .models import Review, FAQ
+from .models import Review, FAQ, AboutPage, Mosaic
 from django.shortcuts import get_object_or_404
-from .models import AboutPage
 from services.models import Service
 
 def index(request):
@@ -15,12 +14,14 @@ def index(request):
   portfolio_items = Portfolio.objects.all().order_by('-date')[:4]
   reviews = Review.objects.all()
   services = Service.objects.all()
+  mosaicobjects = Mosaic.objects.all()
   context={
     'faq': faq,
     'articles': articles,
     'portfolio_items': portfolio_items,
     'reviews': reviews,
-    'services': services
+    'services': services,
+    'mosaicobjects': mosaicobjects
   }
   return render(request, 'home/index.html', context)
 
