@@ -1457,6 +1457,11 @@ select {
   padding-bottom: 5rem;
 }
 
+.px-\[50px\] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -1733,6 +1738,11 @@ select {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+  .max-lg\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -1829,6 +1839,11 @@ select {
 @media not all and (min-width: 640px) {
   .max-sm\:hidden {
     display: none;
+  }
+
+  .max-sm\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -1942,6 +1957,11 @@ select {
     padding-bottom: 3rem;
   }
 
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
   .md\:pb-\[20rem\] {
     padding-bottom: 20rem;
   }
@@ -2026,6 +2046,11 @@ select {
     border-bottom-left-radius: calc(2rem + 1px);
   }
 
+  .lg\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2040,5 +2065,10 @@ select {
 @media (min-width: 1280px) {
   .xl\:max-w-\[50\%\] {
     max-width: 50%;
+  }
+
+  .xl\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 }

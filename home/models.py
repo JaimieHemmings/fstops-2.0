@@ -69,3 +69,22 @@ class Mosaic(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+
+class IntroGrid(models.Model):
+      
+    def get_path(self, filename):
+        ext = filename.split('.')[-1]
+        filename = f"{uuid.uuid4()}.{ext}"
+        return f"introgrid/img/{filename}"
+     
+    title = models.CharField(max_length=120, default='Title Text')
+    intro = models.TextField()
+    img = models.ImageField(upload_to=get_path)
+    img_alt = models.CharField(max_length=120, default='Image')
+    cta_img = models.ImageField(upload_to=get_path)
+    cta_img_alt = models.CharField(max_length=120, default='CTA Image')
+    
+    def __str__(self):
+        return self.title

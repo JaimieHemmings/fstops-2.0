@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .models import Review, FAQ, AboutPage, Mosaic
+from .models import Review, FAQ, AboutPage, Mosaic, IntroGrid
 
 
 class ReviewAdmin(admin.ModelAdmin):
@@ -23,7 +23,13 @@ class MosaicAdmin(admin.ModelAdmin):
     list_display = ["title"]
     
 
+class IntroGridAdmin(admin.ModelAdmin):
+    search_fields = ["title", "description"]
+    list_display = ["title"]
+
+
 admin.site.register(FAQ, FAQAdmin)
 admin.site.register(Review, ReviewAdmin)
 admin.site.register(AboutPage, AboutPageAdmin)
 admin.site.register(Mosaic, MosaicAdmin)
+admin.site.register(IntroGrid, IntroGridAdmin)

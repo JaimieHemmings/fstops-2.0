@@ -4,7 +4,7 @@
   <div class="block md:flex gap-4 flex-col justify-between md:w-2/3">
     <div class="block lg:flex flex-row justify-between gap-4 md:gap-16 pb-5">
       <p data-aos-delay="50"
-      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">Welcome to FStops, where we specialize in capturing moments with professionalism and artistry. From lifestyle brand photography to corporate events, our photography transforms your vision into reality.</p>
+      data-aos-duration="1000" data-aos="fade-in" class="opacity-[0.6] px-3 font-medium inter text-xl basis-1/2">{{ intro_section.intro }}</p>
       <div class=" basis-1/2 max-lg:py-[5rem] p-3 align-baseline max-md:pt-5 flex flex-row justify-between">
         <div class="min-w-[40px]">
           <img data-aos-delay="50"
@@ -31,13 +31,13 @@
             </div>
       </div>
     </div>
-    <img src="{% static 'img/maven.webp' %}" alt="A man holding binoculars" class="max-w-full p-3 rounded-3xl" />
+    <img src="{{ intro_section.img.url }}" alt="{{ intro_section.img_alt }}" class="max-w-full p-3 rounded-3xl" />
   </div>
   <div data-aos-delay="50"
   data-aos-duration="1000" data-aos="fade-in" class="md:w-1/3 block md:flex flex-col justify-between p-3">
     <div class="rounded-lg bg-white p-5 mb-5">
       <img data-aos-delay="50"
-      data-aos-duration="1000" loading="lazy" data-aos="fade-in" src="{% static 'img/selfie.jpg' %}" alt="A mans silhouette exposed against the colourful evening sky" class="max-w-full rounded-lg mb-5" />
+      data-aos-duration="1000" loading="lazy" data-aos="fade-in" src="{{ intro_section.cta_img.url }}" alt="{{intro_section.cta_img_alt}}" class="max-w-full rounded-lg mb-5" />
       <h2 class="text-xl inter font-semibold pb-3">Ready to capture your moments?</h2>
       <div class="flex flex-row">
         <div class="w-2/3">
