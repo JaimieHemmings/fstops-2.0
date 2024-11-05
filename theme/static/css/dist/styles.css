@@ -1062,10 +1062,6 @@ select {
   height: 50px;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
-}
-
 .h-auto {
   height: auto;
 }
@@ -1154,12 +1150,12 @@ select {
   max-width: 60px;
 }
 
-.max-w-\[70\%\] {
-  max-width: 70%;
-}
-
 .max-w-\[75\%\] {
   max-width: 75%;
+}
+
+.max-w-\[90\%\] {
+  max-width: 90%;
 }
 
 .max-w-full {
@@ -1168,10 +1164,6 @@ select {
 
 .max-w-screen-xl {
   max-width: 1280px;
-}
-
-.max-w-\[90\%\] {
-  max-width: 90%;
 }
 
 .flex-shrink {
@@ -1815,6 +1807,11 @@ select {
   .max-md\:py-\[2rem\] {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .max-md\:py-\[3rem\] {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .max-md\:pb-3 {
