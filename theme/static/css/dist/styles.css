@@ -1407,6 +1407,11 @@ select {
   padding-right: 1.25rem;
 }
 
+.px-\[50px\] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1455,11 +1460,6 @@ select {
 .py-\[5rem\] {
   padding-top: 5rem;
   padding-bottom: 5rem;
-}
-
-.px-\[50px\] {
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 .pb-0 {
@@ -1738,11 +1738,6 @@ select {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
-  .max-lg\:px-\[50px\] {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
 
 @media not all and (min-width: 768px) {
@@ -1799,11 +1794,6 @@ select {
     padding-right: 0.75rem;
   }
 
-  .max-md\:px-\[50px\] {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
   .max-md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1839,11 +1829,6 @@ select {
 @media not all and (min-width: 640px) {
   .max-sm\:hidden {
     display: none;
-  }
-
-  .max-sm\:px-\[50px\] {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 }
 
@@ -1957,11 +1942,6 @@ select {
     padding-bottom: 3rem;
   }
 
-  .md\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
   .md\:pb-\[20rem\] {
     padding-bottom: 20rem;
   }
@@ -2044,11 +2024,6 @@ select {
   .lg\:rounded-l-\[calc\(2rem\+1px\)\] {
     border-top-left-radius: calc(2rem + 1px);
     border-bottom-left-radius: calc(2rem + 1px);
-  }
-
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
   }
 
   .lg\:text-2xl {

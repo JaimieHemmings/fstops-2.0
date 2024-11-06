@@ -15,7 +15,7 @@ def index(request):
   portfolio_items = Portfolio.objects.all().order_by('-date')[:4]
   reviews = Review.objects.all()
   services = Service.objects.all()
-  mosaicobjects = Mosaic.objects.all()
+  mosaicobjects = Mosaic.objects.all().order_by('id')
   context={
     'faq': faq,
     'articles': articles,

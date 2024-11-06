@@ -78,7 +78,7 @@ class IntroGrid(models.Model):
         ext = filename.split('.')[-1]
         filename = f"{uuid.uuid4()}.{ext}"
         return f"introgrid/img/{filename}"
-     
+
     title = models.CharField(max_length=120, default='Title Text')
     intro = models.TextField()
     img = models.ImageField(upload_to=get_path)
