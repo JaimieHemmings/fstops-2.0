@@ -96,6 +96,4 @@ document.addEventListener('DOMContentLoaded', function() {
       icon.innerHTML = minusSVG;
     }
   }
-  
-
 });

@@ -1462,6 +1462,11 @@ select {
   padding-bottom: 5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -1727,6 +1732,10 @@ select {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:opacity-\[0\.6\]:hover {
+  opacity: 0.6;
 }
 
 @media not all and (min-width: 1024px) {

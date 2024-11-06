@@ -55,7 +55,9 @@
   {% endblock %}
 
   {% include 'partials/footer.html' %}
+  {% include 'partials/cookie-consent-banner.html' %}
 
+<script src="{% static 'js/cookies-consent.js' %}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   // You can also pass an optional settings object
