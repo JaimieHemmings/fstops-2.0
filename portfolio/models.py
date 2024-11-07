@@ -47,6 +47,7 @@ class Portfolio(models.Model):
         return generated_slug
     
 
+    meta_description = models.CharField(max_length=155, null=False, blank=False, default='This is the default meta description')
     title = models.CharField(max_length=120)
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     thumbnail = models.ImageField(upload_to=get_path)

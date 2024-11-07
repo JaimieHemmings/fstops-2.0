@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+{{ item.meta_description}}
+{% endblock %}
+
+{% block extra_title %}
+ | {{item.title}}
+{% endblock %}
+
 {% block content %}
 
 <section class="flex flex-col justify-end center-bg-img relative" style="background-image:url('{{item.thumbnail.url}}')">

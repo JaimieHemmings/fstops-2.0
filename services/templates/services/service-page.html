@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block meta_description %}
+{{ services.meta_description }}
+{% endblock %}
+
+{% block extra_title %}
+ | {{ service.name }} Photography
+{% endblock %}
+
 {% block content %}
 <section class="pt-5">
   <div class="container mx-auto p-3">

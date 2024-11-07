@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+{{ article.meta_description }}
+{% endblock %}
+
+{% block extra_title %}
+ | {{ article.title }}
+{% endblock %}
+
 {% block content %}
 <header class="p-3 max-md:py-[3rem] py-[20rem] dark-overlay relative center-bg-img" style="background-image:url({{article.thumbnail.url}})">
   <div class="container mx-auto relative z-[20] flex flex-col md:flex-row">

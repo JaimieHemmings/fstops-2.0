@@ -8,6 +8,7 @@ class Service(models.Model):
         filename = f"{uuid.uuid4()}.{ext}"
         return f"services/img/{filename}"
     
+    meta_description = models.CharField(max_length=155, null=False, blank=False, default='This is the default meta description')
     homepage_img = models.ImageField(upload_to=get_path, null=False, blank=False, default='default.jpg')
     homepage_description = models.CharField(max_length=100, null=False, blank=False, default='This is the default decription')
     name = models.CharField(max_length=100, null=False, blank=False)

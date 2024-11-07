@@ -13,6 +13,7 @@ class Article(models.Model):
         filename = f"{uuid.uuid4()}.{ext}"
         return f"articles/img/{filename}"
   
+    meta_description = models.CharField(max_length=155, null=False, blank=False, default='This is the default meta description')
     title = models.CharField(max_length=120)
     thumbnail = models.ImageField(upload_to=get_path)
     slug = models.SlugField(null=True, blank=True, unique=True)

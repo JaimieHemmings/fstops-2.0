@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta_description %}
+We specialise in Event, Aerial, Product and Property Photography. Our services are tailored to meet your needs and exceed your expectations.
+{% endblock %}
+
+{% block extra_title %}
+ | Services
+{% endblock %}
+
 {% block content %}
 <div class="pt-[5rem] md:pb-[2rem] p-5">
   {% include 'home/partials/quote-large.html' with quote="Photography is more than capturing moments; it's about revealing the beauty in the unseen. Every image tells a story waiting to be shared." %}
