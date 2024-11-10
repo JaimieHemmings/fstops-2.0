@@ -14,10 +14,10 @@ def contact(request):
 
             # Send an email to the Admin alerting them of a new message
             send_mail(
-                "New Contact Form Submission",
-                "A new contact form submission has been made.",
-                "hello@fstops.co.uk",
-                ["warbz@live.co.uk"],
+                "FStops: New Contact Form Submission",
+                "A new contact form submission has been made at www.fstops.co.uk.",
+                "jwarbz@gmail.com",
+                ["benniw8@gmail.com"],
                 fail_silently=False,
             )
             
