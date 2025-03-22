@@ -1,0 +1,102 @@
+{% load static %}
+<header>
+  <div class="slideshow-container">
+    <div
+      class="overlay pointer-events-none absolute top-0 left-0 w-full h-full bg-[#111112] opacity-40 z-10"
+    ></div>
+    <div class="slide fade">
+        <img
+          src="{% static 'home/img/slideshow-images/1.webp' %}"
+          alt="A selection of decorative mugs set on a table"
+        >
+    </div>
+    <div class="slide fade">
+      <img
+        src="{% static 'home/img/slideshow-images/2.webp' %}"
+        alt="A shed in front of a bokeh background"
+        >
+    </div>
+    <div class="slide fade">
+      <img
+        src="{% static 'home/img/slideshow-images/3.webp' %}"
+        alt="A man fishing in a still river"
+      >
+    </div>
+    <div class="slide fade">
+      <img
+        src="{% static 'home/img/slideshow-images/4.webp' %}"
+        alt="A woman lifting an olympic barbell"
+      >
+    </div>
+    <div class="slide fade">
+      <img
+        src="{% static 'home/img/slideshow-images/5.webp' %}"
+        alt="A tilt shift effect of a well maintained garden from low perspective"
+      >
+    </div>
+    <div class="slide fade">
+      <img
+        src="{% static 'home/img/slideshow-images/6.webp' %}"
+        alt="A man in hunting gear stood in front of trees"
+      >
+    </div>
+
+
+    <div class="content bg-transparent absolute z-20 w-full top-0 left-0 text-center h-full flex flex-col justify-end py-5">
+      <div class="circle absolute z-20 top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] w-[50px] h-[50px] rounded-full">        
+      </div>
+
+      <h1 class="font-semibold text-xl md:text-2xl leading-4 mb-4 text-white">
+        {% if title %}
+          {{ title }}
+        {% else %}
+          ART IN FOCUS
+        {% endif %}
+      </h1>
+      <p class="text-5xl md:text-8xl text-white mb-[3rem] leading-[0.8] font-bold mt-1">
+        {% if subtitle %}
+          {{ subtitle }}
+        {% else %}
+          YOUR STORY
+        {% endif %}
+        <span class="playfair-display text-4xl md:text-6xl mt-1 block italic gold-text">
+          {% if span %}
+            {{ span }}
+          {% else %}
+            Captured
+          {% endif %}
+        </span>
+      </p>
+
+      <div class="top-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+        <div class="border-corner border-right-0 border-bottom-0"></div>
+        <div class="border-corner border-left-0 border-bottom-0"></div>
+      </div>
+      <div class="bottom-0 absolute left-0 w-full p-5 flex flex-row justify-between align-items-center">
+        <div class="border-corner border-top-0 border-right-0"></div>
+        <div class="border-corner border-top-0 border-left-0"></div>
+      </div>
+
+    </div>
+  </div>
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let slideIndex = 0;
+  const slides = document.getElementsByClassName("slide");
+  
+  function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+          slideIndex = 1;
+      }
+      slides[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+  
+  showSlides();
+});
+</script>
