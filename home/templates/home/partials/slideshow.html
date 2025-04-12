@@ -1,6 +1,6 @@
 {% load static %}
 <header>
-  <div class="slideshow-container">
+  <div class="slideshow-container opacity-0">
     <div
       class="overlay pointer-events-none absolute top-0 left-0 w-full h-full bg-[#111112] z-10" style="opacity: 0.25;"
     ></div>
@@ -80,23 +80,51 @@
     </div>
   </div>
 </header>
+<style>
+  .slideshow-container {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slideshow-container.loaded {
+    opacity: 1;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+</style>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  let slideIndex = 0;
-  const slides = document.getElementsByClassName("slide");
-  
-  function showSlides() {
-      for (let i = 0; i < slides.length; i++) {
-          slides[i].classList.remove("active");
+  document.addEventListener('DOMContentLoaded', function() {
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("slide");
+      const container = document.querySelector('.slideshow-container');
+      
+      // Ensure first slide is visible before revealing
+      slides[0].classList.add('active');
+      
+      // Add loaded class after a brief delay to ensure smooth transition
+      setTimeout(() => {
+          container.classList.add('loaded');
+      }, 100);
+      
+      function showSlides() {
+          for (let i = 0; i < slides.length; i++) {
+              slides[i].classList.remove("active");
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+              slideIndex = 1;
+          }
+          slides[slideIndex - 1].classList.add("active");
+          setTimeout(showSlides, 5000);
       }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-          slideIndex = 1;
-      }
-      slides[slideIndex - 1].classList.add("active");
-      setTimeout(showSlides, 5000); // Change image every 5 seconds
-  }
-  
-  showSlides();
-});
-</script>
+      
+      // Start slideshow after initial load
+      setTimeout(showSlides, 5000);
+  });
+  </script>
